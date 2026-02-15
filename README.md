@@ -1,8 +1,8 @@
 # Future Beyond Technology (FBT)
 **Architecting Secure, Intelligent, and Resilient Digital Ecosystems**
 
-[![Website](https://img.shields.io/badge/Website-futurebeyondtech.in-blue)](https://futurebeyondtech.in)
-[![Contact](https://img.shields.io/badge/Contact-Email-green)](mailto:contact@futurebeyondtech.in)
+[![Website](https://img.shields.io/badge/Website-futurebeyondtech.com-blue)](https://futurebeyondtech.com)
+[![Contact](https://img.shields.io/badge/Contact-Email-green)](mailto:contact@futurebeyondtech.com)
 [![Security](https://img.shields.io/badge/Security-By--Design-gold)](#-security--vulnerability-engineering)
 
 Future Beyond Technology (FBT) is an elite engineering firm dedicated to building secure, scalable, and intelligent software systems. We partner with startups and security-critical organizations to transform complex requirements into robust, production-grade solutions with a focus on **Clean Architecture** and **Long-term Sustainability**.
@@ -59,8 +59,8 @@ FBT contributes to the global engineering community by open-sourcing non-proprie
 
 FBT is available for strategic consulting and end-to-end product development.
 
-* **Official Website:** [futurebeyondtech.in](https://futurebeyondtech.in)
-* **Business Inquiries:** [contact@futurebeyondtech.in](mailto:contact@futurebeyondtech.in)
+* **Official Website:** [futurebeyondtech.com](https://futurebeyondtech.com)
+* **Business Inquiries:** [contact@futurebeyondtech.com](mailto:contact@futurebeyondtech.com)
 * **LinkedIn:** [Follow FBT](https://www.linkedin.com/company/futurebeyondtech)
 
 ---

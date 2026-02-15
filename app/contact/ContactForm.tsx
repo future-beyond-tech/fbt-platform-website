@@ -97,7 +97,7 @@ export default function ContactForm() {
     if (!captchaEnabled) {
       setStatus("error");
       setErrorMessage(
-        "Captcha is not configured. Please email us directly at contact@futurebeyondtech.in."
+        "Captcha is not configured. Please email us directly at contact@futurebeyondtech.com."
       );
       setLoading(false);
       return;
@@ -203,7 +203,7 @@ export default function ContactForm() {
           <p className="text-sm text-red-600 dark:text-red-400">
             Captcha is not configured. Please email us directly at
             {" "}
-            contact@futurebeyondtech.in.
+            contact@futurebeyondtech.com.
           </p>
         )}
 
