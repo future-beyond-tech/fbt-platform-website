@@ -2,6 +2,7 @@ import Hero from "@/components/home/Hero";
 import ClientsShowcase from "@/components/home/ClientsShowcase";
 import Capabilities from "@/components/home/Capabilities";
 import HowWeWorkPreview from "@/components/home/HowWeWorkPreview";
+import Team from "@/components/home/Team";
 import CTA from "@/components/home/CTA";
 import { defaultMetadata } from "@/lib/seo";
 
@@ -18,6 +19,7 @@ export default function HomePage() {
       <ClientsShowcase />
       <Capabilities />
       <HowWeWorkPreview />
+      <Team />
       <CTA />
     </>
   );
