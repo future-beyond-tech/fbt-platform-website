@@ -37,12 +37,14 @@ const branches: Branch[] = [
       name: "Abdul Hameed",
       title: "HR & Operations Manager",
     },
-    reports: [
-      {
-        name: "Kohilavani",
-        title: "Marketing Executive",
-      },
-    ],
+    reports: [],
+  },
+  {
+    manager: {
+      name: "Kohilavani",
+      title: "Marketing Executive",
+    },
+    reports: [],
   },
 ];
 
@@ -78,9 +80,9 @@ export default function OrganizationChart() {
             </div>
 
             <div className="w-full">
-              <div className="mx-auto hidden w-3/5 border-t border-slate-300 dark:border-slate-700 md:block" />
+              <div className="mx-auto hidden w-11/12 border-t border-slate-300 dark:border-slate-700 md:block lg:w-4/5" />
 
-              <div className="mt-1 grid gap-12 md:grid-cols-2 md:gap-14">
+              <div className="mt-1 grid gap-12 md:grid-cols-2 md:gap-14 lg:grid-cols-3">
                 {branches.map((branch) => (
                   <BranchColumn key={branch.manager.name} branch={branch} />
                 ))}
