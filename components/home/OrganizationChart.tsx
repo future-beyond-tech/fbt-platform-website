@@ -73,25 +73,76 @@ export default function OrganizationChart() {
             </p>
           </header>
 
-          <div className="flex flex-col items-center space-y-16">
-            <div className="flex flex-col items-center">
-              <OrgNode person={founder} />
-              <Connector className="mt-5 h-10" />
-            </div>
-
-            <div className="w-full">
-              <div className="mx-auto hidden w-11/12 border-t border-slate-300 dark:border-slate-700 md:block lg:w-4/5" />
-
-              <div className="mt-1 grid gap-12 md:grid-cols-2 md:gap-14 lg:grid-cols-3">
-                {branches.map((branch) => (
-                  <BranchColumn key={branch.manager.name} branch={branch} />
-                ))}
-              </div>
-            </div>
-          </div>
+          <MobileChart />
+          <DesktopChart />
         </div>
       </Container>
     </section>
+  );
+}
+
+function MobileChart() {
+  return (
+    <div className="lg:hidden">
+      <div className="flex flex-col items-center">
+        <OrgNode person={founder} />
+        <Connector className="mt-5 h-8" />
+      </div>
+
+      <div className="relative mx-auto mt-2 w-full max-w-sm pl-6">
+        <div
+          className="absolute left-2 top-0 bottom-0 w-px bg-slate-300 dark:bg-slate-700"
+          aria-hidden="true"
+        />
+
+        <ol className="space-y-8">
+          {branches.map((branch) => (
+            <li key={branch.manager.name} className="relative">
+              <div className="absolute left-0 top-6 h-px w-6 bg-slate-300 dark:bg-slate-700" aria-hidden="true" />
+
+              <div className="pl-6">
+                <OrgNode person={branch.manager} />
+
+                {branch.reports.length > 0 ? (
+                  <ol className="relative mt-4 space-y-4 pl-6 before:pointer-events-none before:absolute before:left-0 before:top-0 before:bottom-5 before:w-px before:bg-slate-300 dark:before:bg-slate-700">
+                    {branch.reports.map((report) => (
+                      <li key={report.name} className="relative">
+                        <div
+                          className="absolute -left-6 top-6 h-px w-6 bg-slate-300 dark:bg-slate-700"
+                          aria-hidden="true"
+                        />
+                        <OrgNode person={report} />
+                      </li>
+                    ))}
+                  </ol>
+                ) : null}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  );
+}
+
+function DesktopChart() {
+  return (
+    <div className="hidden lg:flex lg:flex-col lg:items-center lg:space-y-16">
+      <div className="flex flex-col items-center">
+        <OrgNode person={founder} />
+        <Connector className="mt-5 h-10" />
+      </div>
+
+      <div className="w-full">
+        <div className="mx-auto w-11/12 border-t border-slate-300 dark:border-slate-700 lg:w-4/5" />
+
+        <div className="mt-1 grid gap-12 lg:grid-cols-3 lg:gap-14">
+          {branches.map((branch) => (
+            <BranchColumn key={branch.manager.name} branch={branch} />
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 
