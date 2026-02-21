@@ -119,7 +119,7 @@ export default function Hero() {
                 PG Management
               </p>
               <p className="mt-3 text-sm text-slate-600 dark:text-slate-400">
-                Beta: Q3 2024
+                Beta: Q3 2026
               </p>
               <p className="mt-1 text-sm text-emerald-700 dark:text-emerald-400">
                 50+ waitlist

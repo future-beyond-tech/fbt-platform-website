@@ -32,7 +32,7 @@ export default function FeaturedProduct() {
                 Multi-tenant PG management for rent, power billing, and tenant lifecycle.
               </p>
               <p className="mt-2 text-sm font-medium text-emerald-700 dark:text-emerald-400">
-                In Beta (Q3 2024)
+                In Beta (Q3 2026)
               </p>
             </article>
 

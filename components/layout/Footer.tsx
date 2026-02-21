@@ -25,7 +25,7 @@ const productCards = [
   {
     name: "PG Management SaaS",
     href: "/products/pg-management",
-    status: "Beta Q3 2024",
+    status: "Beta Q3 2026",
   },
   {
     name: "Vulnerability Assessment AI",

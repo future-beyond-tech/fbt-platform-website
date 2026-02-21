@@ -24,7 +24,7 @@ export default function PgSaasWaitlistConfirmationPage() {
           </h1>
           <p className="mt-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:text-base">
             We sent a confirmation email with next steps. Beta onboarding is
-            targeted for Q3 2024, and early access members receive launch
+            targeted for Q3 2026, and early access members receive launch
             benefits first.
           </p>
 

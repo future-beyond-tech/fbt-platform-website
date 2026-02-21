@@ -153,7 +153,7 @@ What to expect next:
 - You can submit product feedback directly to the core team.
 - Early access users get 6 months free at launch and onboarding support.
 
-Current status: In development (Phase 1-2), beta opening Q3 2024.
+Current status: In development (Phase 1-2), beta opening Q3 2026.
 
 If you have questions, reply to this email and our team will help.
 

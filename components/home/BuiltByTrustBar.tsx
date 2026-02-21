@@ -29,7 +29,7 @@ export default function BuiltByTrustBar() {
                   50+ waitlist
                 </p>
                 <p className="mt-1 text-xs font-medium text-emerald-700 dark:text-emerald-400">
-                  Beta Q3 2024
+                  Beta Q3 2026
                 </p>
               </article>
               <article className="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">

@@ -122,7 +122,7 @@ const personas = [
 const faqItems = [
   {
     q: "Is this available now?",
-    a: "The platform is currently in development (Phase 2). Beta access opens in Q3 2024. Join the waitlist for early access.",
+    a: "The platform is currently in development (Phase 2). Beta access opens in Q3 2026. Join the waitlist for early access.",
   },
   {
     q: "Can I migrate from my current Excel or legacy system?",
@@ -148,7 +148,7 @@ const faqItems = [
 
 export const metadata = defaultMetadata(
   "FBT PG SaaS Platform | Enterprise Multi-Tenant PG Management Software",
-  "Enterprise-grade SaaS platform for PG owners and coliving chains. Automated rent, power billing, tenant lifecycle management. Built with Clean Architecture, CQRS, multi-tenancy. Beta opening Q3 2024.",
+  "Enterprise-grade SaaS platform for PG owners and coliving chains. Automated rent, power billing, tenant lifecycle management. Built with Clean Architecture, CQRS, multi-tenancy. Beta opening Q3 2026.",
   "/products/pg-management"
 );
 
@@ -527,7 +527,7 @@ export default function PgSaasPage() {
             </div>
             <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300 sm:text-base">
               Currently in Phase 1-2. Core tenant management and billing engine
-              are under active development. Beta release is targeting Q3 2024.
+              are under active development. Beta release is targeting Q3 2026.
             </p>
           </section>
 

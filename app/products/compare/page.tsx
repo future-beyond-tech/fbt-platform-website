@@ -5,7 +5,7 @@ import { defaultMetadata } from "@/lib/seo";
 const comparisonRows = [
   ["Industry", "Real Estate", "Cybersecurity"],
   ["Target Users", "PG Owners", "Security Teams"],
-  ["Status", "Beta Q3 2024", "Release Aug 2026"],
+  ["Status", "Beta Q3 2026", "Release Aug 2026"],
   ["Architecture", "Modular Monolith", "Microservices"],
   ["Key Tech", ".NET 8, CQRS", ".NET 8 + Python AI"],
   [

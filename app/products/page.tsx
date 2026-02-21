@@ -6,7 +6,7 @@ import { defaultMetadata } from "@/lib/seo";
 
 export const metadata = defaultMetadata(
   "FBT Products | Enterprise SaaS Platforms Built With Clean Architecture",
-  "Explore FBT's product studio offerings: ZAuthSecurity architecture services, PG management SaaS (beta Q3 2024), and AI vulnerability assessment (release Aug 2026).",
+  "Explore FBT's product studio offerings: ZAuthSecurity architecture services, PG management SaaS (beta Q3 2026), and AI vulnerability assessment (release Aug 2026).",
   "/products"
 );
 
@@ -80,7 +80,7 @@ export default function ProductsPage() {
                 Multi-Tenant PG Management
               </h2>
               <p className="mt-3 text-sm font-medium text-emerald-700 dark:text-emerald-400">
-                Status: In Beta (Q3 2024)
+                Status: In Beta (Q3 2026)
               </p>
               <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:text-base">
                 Automating rent, power billing, and tenant lifecycle for PG
@@ -200,7 +200,7 @@ export default function ProductsPage() {
                   </tr>
                   <tr className="border-b border-slate-100 dark:border-slate-800">
                     <td className="py-2">Status</td>
-                    <td className="py-2">Beta Q3 2024</td>
+                    <td className="py-2">Beta Q3 2026</td>
                     <td className="py-2">Release Aug 2026</td>
                   </tr>
                   <tr className="border-b border-slate-100 dark:border-slate-800">
