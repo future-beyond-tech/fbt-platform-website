@@ -4,6 +4,8 @@ import { siteConfig } from "@/lib/siteConfig";
 
 const companyLinks = [
   { name: "About", href: "/about" },
+  { name: "How We Work", href: "/how-we-work" },
+  { name: "Services", href: "/services" },
   { name: "Team", href: "/team" },
   { name: "Careers", href: "/careers" },
   { name: "Contact", href: "/contact" },
@@ -11,6 +13,7 @@ const companyLinks = [
 
 const insightLinks = [
   { name: "Research", href: "/research" },
+  { name: "Resources", href: "/resources" },
   { name: "Case Studies", href: "/work" },
   { name: "Technical Blog", href: "/blog" },
   { name: "Architecture Deep Dives", href: "/insights/architecture-deep-dives" },

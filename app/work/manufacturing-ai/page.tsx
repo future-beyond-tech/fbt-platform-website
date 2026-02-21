@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Container from "@/components/layout/Container";
 import { defaultMetadata } from "@/lib/seo";
 
@@ -164,6 +165,23 @@ export default function ManufacturingAiCaseStudyPage() {
               AI platform and MLOps engineers.
             </p>
           </Section>
+
+          <section className="pt-2">
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/work"
+                className="inline-flex min-h-[44px] items-center justify-center rounded-lg border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
+              >
+                Back to Case Studies
+              </Link>
+              <Link
+                href="/assessment"
+                className="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200"
+              >
+                Book Assessment
+              </Link>
+            </div>
+          </section>
         </div>
       </Container>
     </article>

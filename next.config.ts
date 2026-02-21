@@ -20,6 +20,20 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/products/pgsaas",
+        destination: "/products/pg-management",
+        permanent: true,
+      },
+      {
+        source: "/products/pgsaas/:path*",
+        destination: "/products/pg-management/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
