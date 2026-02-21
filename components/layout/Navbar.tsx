@@ -40,6 +40,11 @@ const navGroups: NavGroup[] = [
         href: "/products/vulnerability-ai",
         description: "Security intelligence automation platform",
       },
+      {
+        name: "Supply Chain Security",
+        href: "/sbom",
+        description: "Coming 2026",
+      },
     ],
   },
   {

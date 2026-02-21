@@ -37,6 +37,11 @@ const productCards = [
     href: "/products/vulnerability-ai",
     status: "Release Aug 2026",
   },
+  {
+    name: "Supply Chain (Soon)",
+    href: "/sbom",
+    status: "Coming 2026",
+  },
 ] as const;
 
 export default function Footer() {

@@ -10,6 +10,7 @@ import HowWeWorkPreview from "@/components/home/HowWeWorkPreview";
 import Team from "@/components/home/Team";
 import OrganizationChart from "@/components/home/OrganizationChart";
 import CTA from "@/components/home/CTA";
+import SBOMTeaserSection from "@/components/home/SBOMTeaserSection";
 import BuiltByTrustBar from "@/components/home/BuiltByTrustBar";
 import { defaultMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
@@ -67,6 +68,7 @@ export default function HomePage() {
       <Team />
       <OrganizationChart />
       <CTA />
+      <SBOMTeaserSection />
       <BuiltByTrustBar />
     </>
   );

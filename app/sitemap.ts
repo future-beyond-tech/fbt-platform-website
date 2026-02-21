@@ -24,6 +24,7 @@ const routes = [
   "/products/vulnerability-ai",
   "/products/vulnerability-ai/early-access",
   "/products/compare",
+  "/sbom",
   "/services/product-engineering",
   "/services/security-engineering",
   "/services/ai-automation",
