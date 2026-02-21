@@ -1,0 +1,22 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="880" height="600" rx="24" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <rect x="60" y="70" width="780" height="120" rx="16" fill="#E2E8F0"/>
+  <text x="95" y="140" fill="#0F172A" font-size="40" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    FBT Product Engineering Team
+  </text>
+
+  <circle cx="180" cy="320" r="72" fill="#BFDBFE"/>
+  <circle cx="360" cy="320" r="72" fill="#DCFCE7"/>
+  <circle cx="540" cy="320" r="72" fill="#FDE68A"/>
+  <circle cx="720" cy="320" r="72" fill="#FCA5A5"/>
+
+  <rect x="120" y="420" width="120" height="32" rx="8" fill="#334155"/>
+  <rect x="300" y="420" width="120" height="32" rx="8" fill="#334155"/>
+  <rect x="480" y="420" width="120" height="32" rx="8" fill="#334155"/>
+  <rect x="660" y="420" width="120" height="32" rx="8" fill="#334155"/>
+
+  <rect x="90" y="500" width="720" height="60" rx="12" fill="#EEF2FF" stroke="#818CF8" stroke-width="1.6"/>
+  <text x="120" y="538" fill="#3730A3" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Engineers building SaaS products and consulting systems with the same architecture standards.
+  </text>
+</svg>

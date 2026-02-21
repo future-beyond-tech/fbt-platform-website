@@ -8,7 +8,7 @@ export default function HowWeWorkPreview() {
         "No shortcuts, no fragile systems",
     ];
     return (
-        <section className="py-20 sm:py-24 lg:py-32" aria-labelledby="how-we-work-heading">
+        <section id="methodology" className="py-20 sm:py-24 lg:py-32" aria-labelledby="how-we-work-heading">
             <Container>
                 <div className="text-center">
                     <p className="text-xs font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400 sm:text-sm">

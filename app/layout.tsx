@@ -1,9 +1,11 @@
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ExperienceEnhancements from "@/components/layout/ExperienceEnhancements";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import { defaultMetadata } from "@/lib/seo";
+import { organizationAndServiceSchema } from "@/lib/structuredData";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = defaultMetadata();
@@ -29,11 +31,18 @@ export default function RootLayout({
             gtag('config', 'G-3BTYK7B86L');
           `}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationAndServiceSchema),
+          }}
+        />
       </head>
 
       <body className="bg-background text-foreground antialiased min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>
+        <ExperienceEnhancements />
         <Analytics />
         <Footer />
       </body>

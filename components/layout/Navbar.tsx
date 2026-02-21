@@ -5,12 +5,86 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Container from "./Container";
 
-const navItems = [
-  { name: "Services", href: "/services" },
-  { name: "How We Work", href: "/how-we-work" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+type NavLinkItem = {
+  name: string;
+  href: string;
+  description?: string;
+};
+
+type NavGroup = {
+  name: string;
+  items: NavLinkItem[];
+};
+
+const navGroups: NavGroup[] = [
+  {
+    name: "Products",
+    items: [
+      { name: "Overview", href: "/products" },
+      {
+        name: "Security Expertise",
+        href: "/products/zauthsecurity",
+        description: "Enterprise auth architecture",
+      },
+      {
+        name: "PG Management SaaS",
+        href: "/products/pg-management",
+        description: "Enterprise PG operations platform",
+      },
+      {
+        name: "Vulnerability Assessment AI",
+        href: "/products/vulnerability-ai",
+        description: "Security intelligence automation platform",
+      },
+    ],
+  },
+  {
+    name: "Services",
+    items: [
+      { name: "Product Engineering", href: "/services/product-engineering" },
+      { name: "Security Engineering", href: "/services/security-engineering" },
+      { name: "AI Automation", href: "/services/ai-automation" },
+      {
+        name: "Architecture Consulting",
+        href: "/services/architecture-consulting",
+      },
+    ],
+  },
+  {
+    name: "Insights",
+    items: [
+      { name: "Case Studies", href: "/work" },
+      { name: "Technical Blog", href: "/blog" },
+      {
+        name: "Architecture Deep Dives",
+        href: "/insights/architecture-deep-dives",
+      },
+    ],
+  },
+  {
+    name: "Company",
+    items: [
+      { name: "About", href: "/about" },
+      { name: "Team", href: "/team" },
+      { name: "Careers", href: "/careers" },
+    ],
+  },
 ];
+
+const actionLinks = [
+  {
+    name: "Contact",
+    href: "/contact",
+    className:
+      "inline-flex min-h-[48px] items-center justify-center rounded-lg border border-slate-300 px-4 py-2.5 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800",
+  },
+  {
+    name: "Book Assessment",
+    href: "/assessment",
+    className:
+      "inline-flex min-h-[48px] items-center justify-center rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200",
+  },
+] as const;
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -32,38 +106,79 @@ export default function Navbar() {
             className="hidden items-center gap-1 lg:gap-2 md:flex"
             aria-label="Main navigation"
           >
-            {navItems.map((item) => {
-              const isActive = pathname === item.href;
+            {navGroups.map((group) => {
+              const isGroupActive = group.items.some((item) =>
+                pathname.startsWith(item.href)
+              );
+
               return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`rounded-md px-3 py-2 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900 ${
-                    isActive
-                      ? "bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-slate-100"
-                      : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-100"
-                  }`}
-                >
-                  {item.name}
-                </Link>
+                <div key={group.name} className="group relative">
+                  <button
+                    type="button"
+                    className={`inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900 ${
+                      isGroupActive
+                        ? "bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-slate-100"
+                        : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-100"
+                    }`}
+                    aria-haspopup="menu"
+                  >
+                    {group.name}
+                    <svg
+                      viewBox="0 0 20 20"
+                      className="h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      aria-hidden="true"
+                    >
+                      <path d="M5 7.5 10 12.5 15 7.5" />
+                    </svg>
+                  </button>
+
+                  <div className="invisible absolute left-0 top-full z-20 mt-2 w-80 rounded-xl border border-slate-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 dark:border-slate-700 dark:bg-slate-900">
+                    {group.items.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`block rounded-lg p-3 transition-colors focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50 ${
+                          pathname.startsWith(item.href)
+                            ? "border border-slate-300 bg-slate-100 dark:border-slate-600 dark:bg-slate-800"
+                            : "border border-transparent hover:border-slate-300 hover:bg-slate-50 dark:hover:border-slate-600 dark:hover:bg-slate-800"
+                        }`}
+                      >
+                        <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                          {item.name}
+                        </p>
+                        {item.description && (
+                          <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
+                            {item.description}
+                          </p>
+                        )}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               );
             })}
           </nav>
 
-          <div className="hidden md:flex">
-            <Link
-              href="/contact"
-              onClick={() => setIsMenuOpen(false)}
-              className="shrink-0 rounded-lg bg-slate-900 dark:bg-slate-50 px-4 py-2.5 text-sm font-medium text-white dark:text-slate-900 min-h-[44px] flex items-center justify-center transition-colors hover:bg-slate-800 dark:hover:bg-slate-200 focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
-            >
-              Start a Conversation
-            </Link>
+          <div className="hidden items-center gap-2 md:flex">
+            {actionLinks.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                onClick={() => setIsMenuOpen(false)}
+                className={item.className}
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
 
           <button
             type="button"
-            className="md:hidden min-h-[44px] rounded-lg border border-slate-300 dark:border-slate-700 px-3 py-2 text-sm font-medium text-slate-700 dark:text-slate-200 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+            className="md:hidden min-h-[48px] rounded-lg border border-slate-300 dark:border-slate-700 px-3 py-2 text-base font-medium text-slate-700 dark:text-slate-200 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-nav"
             onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -78,30 +193,46 @@ export default function Navbar() {
             className="border-t border-slate-200 py-3 md:hidden dark:border-slate-800"
           >
             <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
-              {navItems.map((item) => {
-                const isActive = pathname === item.href;
-                return (
+              {navGroups.map((group) => (
+                <div
+                  key={group.name}
+                  className="rounded-lg border border-slate-200 bg-slate-50 p-3 dark:border-slate-700 dark:bg-slate-800/50"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                    {group.name}
+                  </p>
+                  {group.items.map((item) => {
+                    const isActive = pathname.startsWith(item.href);
+                    return (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`mt-2 flex min-h-[48px] items-center rounded-md px-3 py-2 text-base font-medium transition-colors focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900 ${
+                          isActive
+                            ? "bg-slate-100 text-slate-900 dark:bg-slate-700 dark:text-slate-100"
+                            : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700"
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    );
+                  })}
+                </div>
+              ))}
+
+              <div className="mt-2 grid gap-2 sm:grid-cols-2">
+                {actionLinks.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className={`rounded-md px-3 py-2 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900 ${
-                      isActive
-                        ? "bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-slate-100"
-                        : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-100"
-                    }`}
+                    className={item.className}
                   >
                     {item.name}
                   </Link>
-                );
-              })}
-              <Link
-                href="/contact"
-                onClick={() => setIsMenuOpen(false)}
-                className="mt-2 inline-flex min-h-[44px] items-center justify-center rounded-lg bg-slate-900 dark:bg-slate-50 px-4 py-2.5 text-sm font-medium text-white dark:text-slate-900 transition-colors hover:bg-slate-800 dark:hover:bg-slate-200 focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
-              >
-                Start a Conversation
-              </Link>
+                ))}
+              </div>
             </nav>
           </div>
         )}

@@ -1,0 +1,93 @@
+<svg width="1400" height="820" viewBox="0 0 1400 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1 1L11 6L1 11" stroke="#1F2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect x="18" y="18" width="1364" height="784" rx="22" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="70" y="84" fill="#0F172A" font-size="36" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Architecture Redesign - Before vs After
+  </text>
+
+  <rect x="70" y="140" width="605" height="620" rx="18" fill="#FFF1F2" stroke="#FB7185" stroke-width="2"/>
+  <text x="95" y="190" fill="#9F1239" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Before
+  </text>
+  <text x="95" y="225" fill="#9F1239" font-size="18" font-family="Arial, Helvetica, sans-serif">
+    Monolithic API and direct downstream coupling
+  </text>
+
+  <rect x="120" y="275" width="220" height="110" rx="12" fill="#FECACA" stroke="#DC2626" stroke-width="2"/>
+  <text x="160" y="336" fill="#7F1D1D" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Mobile/Web
+  </text>
+
+  <rect x="390" y="265" width="230" height="130" rx="12" fill="#FCA5A5" stroke="#B91C1C" stroke-width="2"/>
+  <text x="430" y="338" fill="#7F1D1D" font-size="24" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    API Monolith
+  </text>
+
+  <rect x="210" y="475" width="190" height="105" rx="12" fill="#FEE2E2" stroke="#E11D48" stroke-width="2"/>
+  <text x="242" y="535" fill="#881337" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Fraud Tool
+  </text>
+
+  <rect x="440" y="475" width="170" height="105" rx="12" fill="#FEE2E2" stroke="#E11D48" stroke-width="2"/>
+  <text x="490" y="535" fill="#881337" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Ledger
+  </text>
+
+  <line x1="340" y1="330" x2="390" y2="330" stroke="#7F1D1D" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="505" y1="395" x2="305" y2="475" stroke="#7F1D1D" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="525" y1="395" x2="525" y2="475" stroke="#7F1D1D" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="725" y="140" width="605" height="620" rx="18" fill="#ECFDF5" stroke="#34D399" stroke-width="2"/>
+  <text x="750" y="190" fill="#065F46" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    After
+  </text>
+  <text x="750" y="225" fill="#065F46" font-size="18" font-family="Arial, Helvetica, sans-serif">
+    Segmented services with policy and event-driven settlement
+  </text>
+
+  <rect x="760" y="270" width="180" height="105" rx="12" fill="#BFDBFE" stroke="#2563EB" stroke-width="2"/>
+  <text x="805" y="328" fill="#1E3A8A" font-size="21" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Clients
+  </text>
+
+  <rect x="980" y="250" width="190" height="125" rx="12" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+  <text x="1012" y="312" fill="#1E3A8A" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    API Gateway
+  </text>
+
+  <rect x="760" y="430" width="190" height="105" rx="12" fill="#DCFCE7" stroke="#16A34A" stroke-width="2"/>
+  <text x="795" y="490" fill="#166534" font-size="21" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    AuthZ Policy
+  </text>
+
+  <rect x="980" y="430" width="190" height="105" rx="12" fill="#DCFCE7" stroke="#16A34A" stroke-width="2"/>
+  <text x="1006" y="490" fill="#166534" font-size="21" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Payout Service
+  </text>
+
+  <rect x="1195" y="430" width="110" height="105" rx="12" fill="#FEF9C3" stroke="#D97706" stroke-width="2"/>
+  <text x="1210" y="490" fill="#92400E" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Queue
+  </text>
+
+  <rect x="980" y="590" width="190" height="100" rx="12" fill="#E2E8F0" stroke="#475569" stroke-width="2"/>
+  <text x="1015" y="647" fill="#0F172A" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Ledger DB
+  </text>
+
+  <line x1="940" y1="323" x2="980" y2="313" stroke="#0F172A" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1075" y1="375" x2="855" y2="430" stroke="#0F172A" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1080" y1="375" x2="1080" y2="430" stroke="#0F172A" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1170" y1="485" x2="1195" y2="485" stroke="#0F172A" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1250" y1="535" x2="1085" y2="590" stroke="#0F172A" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="760" y="695" width="545" height="45" rx="10" fill="#D1FAE5" stroke="#34D399" stroke-width="1.6"/>
+  <text x="785" y="723" fill="#065F46" font-size="18" font-family="Arial, Helvetica, sans-serif">
+    Outcome: policy enforcement, isolated failure domains, and lower p99 latency under load
+  </text>
+</svg>

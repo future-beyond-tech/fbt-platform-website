@@ -76,3 +76,21 @@ p {
 :focus:not(:focus-visible) {
   outline: none;
 }
+
+@media (hover: none), (pointer: coarse) {
+  button,
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea,
+  a.inline-flex {
+    min-height: 48px;
+  }
+
+  button,
+  input,
+  select,
+  textarea,
+  a.inline-flex {
+    font-size: 16px;
+  }
+}

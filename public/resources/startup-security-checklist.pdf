@@ -1,0 +1,443 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 3 /Kids [5 0 R 7 0 R 9 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 2425 >>
+stream
+0.06 0.14 0.24 rg
+0 734 612 58 re f
+1.000 1.000 1.000 rg
+BT
+/F2 20 Tf
+1 0 0 1 48 756 Tm
+(The Startup Security Checklist) Tj
+ET
+0.880 0.930 0.980 rg
+BT
+/F1 11 Tf
+1 0 0 1 48 734 Tm
+(27 critical checks before your next audit or funding round) Tj
+ET
+0.880 0.930 0.980 rg
+BT
+/F1 10 Tf
+1 0 0 1 540 734 Tm
+(Page 1/3) Tj
+ET
+0.91 0.95 0.99 rg
+46 662 520 32 re f
+0.090 0.240 0.400 rg
+BT
+/F2 13 Tf
+1 0 0 1 54 684 Tm
+(Section A - Access and Platform Foundations) Tj
+ET
+0.35 0.44 0.56 RG
+58 632 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 642 Tm
+(1. Enforce MFA for all production and cloud admin accounts.) Tj
+ET
+0.35 0.44 0.56 RG
+58 602 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 612 Tm
+(2. Lock down privileged roles with least-privilege access policies.) Tj
+ET
+0.35 0.44 0.56 RG
+58 572 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 582 Tm
+(3. Rotate API keys and secrets at a defined cadence \(<= 90 days\).) Tj
+ET
+0.35 0.44 0.56 RG
+58 542 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 552 Tm
+(4. Require SSO for internal tools handling customer or financial data.) Tj
+ET
+0.35 0.44 0.56 RG
+58 512 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 522 Tm
+(5. Maintain an up-to-date asset inventory for services and data stores.) Tj
+ET
+0.35 0.44 0.56 RG
+58 482 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 492 Tm
+(6. Tag systems by criticality and assign clear ownership per service.) Tj
+ET
+0.35 0.44 0.56 RG
+58 452 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 462 Tm
+(7. Validate backup restore workflow quarterly, not just backup success.) Tj
+ET
+0.35 0.44 0.56 RG
+58 422 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 432 Tm
+(8. Apply baseline hardening templates to servers and managed services.) Tj
+ET
+0.35 0.44 0.56 RG
+58 392 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 402 Tm
+(9. Document trust boundaries and threat actors for core product flows.) Tj
+ET
+0.93 0.96 0.99 rg
+46 120 520 84 re f
+0.090 0.240 0.400 rg
+BT
+/F2 12 Tf
+1 0 0 1 58 106 Tm
+(Implementation note) Tj
+ET
+0.210 0.310 0.430 rg
+BT
+/F1 10 Tf
+1 0 0 1 58 82 Tm
+(Prioritize controls tied to customer trust, financial data, and privileged acc) Tj
+ET
+0.210 0.310 0.430 rg
+BT
+/F1 10 Tf
+1 0 0 1 58 65 Tm
+(ess paths first.) Tj
+ET
+0.84 0.89 0.95 rg
+40 34 532 1 re f
+0.280 0.360 0.480 rg
+BT
+/F1 10 Tf
+1 0 0 1 48 48 Tm
+(Future Beyond Technology  |  Startup Security Checklist) Tj
+ET
+
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 2425 >>
+stream
+0.06 0.14 0.24 rg
+0 734 612 58 re f
+1.000 1.000 1.000 rg
+BT
+/F2 20 Tf
+1 0 0 1 48 756 Tm
+(The Startup Security Checklist) Tj
+ET
+0.880 0.930 0.980 rg
+BT
+/F1 11 Tf
+1 0 0 1 48 734 Tm
+(27 critical checks before your next audit or funding round) Tj
+ET
+0.880 0.930 0.980 rg
+BT
+/F1 10 Tf
+1 0 0 1 540 734 Tm
+(Page 2/3) Tj
+ET
+0.91 0.95 0.99 rg
+46 662 520 32 re f
+0.090 0.240 0.400 rg
+BT
+/F2 13 Tf
+1 0 0 1 54 684 Tm
+(Section B - Application and Infrastructure Controls) Tj
+ET
+0.35 0.44 0.56 RG
+58 632 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 642 Tm
+(10. Add authz checks at endpoint and business-rule layers.) Tj
+ET
+0.35 0.44 0.56 RG
+58 602 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 612 Tm
+(11. Enforce strict input validation and canonicalization at API edge.) Tj
+ET
+0.35 0.44 0.56 RG
+58 572 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 582 Tm
+(12. Add dependency vulnerability scanning to CI for every pull request.) Tj
+ET
+0.35 0.44 0.56 RG
+58 542 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 552 Tm
+(13. Require branch protection and signed commits on protected branches.) Tj
+ET
+0.35 0.44 0.56 RG
+58 512 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 522 Tm
+(14. Gate releases with automated SAST and secret detection scans.) Tj
+ET
+0.35 0.44 0.56 RG
+58 482 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 492 Tm
+(15. Log security events with request correlation IDs and actor metadata.) Tj
+ET
+0.35 0.44 0.56 RG
+58 452 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 462 Tm
+(16. Encrypt data in transit and at rest for all customer workloads.) Tj
+ET
+0.35 0.44 0.56 RG
+58 422 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 432 Tm
+(17. Isolate high-risk workloads in separate network segments.) Tj
+ET
+0.35 0.44 0.56 RG
+58 392 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 402 Tm
+(18. Define p95 and p99 performance budgets for critical transactions.) Tj
+ET
+0.93 0.96 0.99 rg
+46 120 520 84 re f
+0.090 0.240 0.400 rg
+BT
+/F2 12 Tf
+1 0 0 1 58 106 Tm
+(Implementation note) Tj
+ET
+0.210 0.310 0.430 rg
+BT
+/F1 10 Tf
+1 0 0 1 58 82 Tm
+(Integrate these checks directly into CI and release workflows to avoid one-tim) Tj
+ET
+0.210 0.310 0.430 rg
+BT
+/F1 10 Tf
+1 0 0 1 58 65 Tm
+(e security theater.) Tj
+ET
+0.84 0.89 0.95 rg
+40 34 532 1 re f
+0.280 0.360 0.480 rg
+BT
+/F1 10 Tf
+1 0 0 1 48 48 Tm
+(Future Beyond Technology  |  Startup Security Checklist) Tj
+ET
+
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 2408 >>
+stream
+0.06 0.14 0.24 rg
+0 734 612 58 re f
+1.000 1.000 1.000 rg
+BT
+/F2 20 Tf
+1 0 0 1 48 756 Tm
+(The Startup Security Checklist) Tj
+ET
+0.880 0.930 0.980 rg
+BT
+/F1 11 Tf
+1 0 0 1 48 734 Tm
+(27 critical checks before your next audit or funding round) Tj
+ET
+0.880 0.930 0.980 rg
+BT
+/F1 10 Tf
+1 0 0 1 540 734 Tm
+(Page 3/3) Tj
+ET
+0.91 0.95 0.99 rg
+46 662 520 32 re f
+0.090 0.240 0.400 rg
+BT
+/F2 13 Tf
+1 0 0 1 54 684 Tm
+(Section C - AI/Data Governance and Incident Readiness) Tj
+ET
+0.35 0.44 0.56 RG
+58 632 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 642 Tm
+(19. Track model/data lineage if you use AI in product decisions.) Tj
+ET
+0.35 0.44 0.56 RG
+58 602 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 612 Tm
+(20. Validate data retention and deletion policies against contracts.) Tj
+ET
+0.35 0.44 0.56 RG
+58 572 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 582 Tm
+(21. Create a severity matrix with owner, SLA, and escalation path.) Tj
+ET
+0.35 0.44 0.56 RG
+58 542 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 552 Tm
+(22. Run tabletop incident exercises at least twice per year.) Tj
+ET
+0.35 0.44 0.56 RG
+58 512 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 522 Tm
+(23. Keep an evidence folder for audits \(controls, logs, approvals\).) Tj
+ET
+0.35 0.44 0.56 RG
+58 482 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 492 Tm
+(24. Align security controls to SOC 2 or ISO 27001 readiness checklist.) Tj
+ET
+0.35 0.44 0.56 RG
+58 452 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 462 Tm
+(25. Establish third-party risk reviews for critical vendor integrations.) Tj
+ET
+0.35 0.44 0.56 RG
+58 422 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 432 Tm
+(26. Define a 30-60-90 day security improvement roadmap.) Tj
+ET
+0.35 0.44 0.56 RG
+58 392 11 11 re S
+0.100 0.150 0.220 rg
+BT
+/F1 11 Tf
+1 0 0 1 76 402 Tm
+(27. Review security KPIs monthly with engineering leadership.) Tj
+ET
+0.93 0.96 0.99 rg
+46 120 520 84 re f
+0.090 0.240 0.400 rg
+BT
+/F2 12 Tf
+1 0 0 1 58 106 Tm
+(Implementation note) Tj
+ET
+0.210 0.310 0.430 rg
+BT
+/F1 10 Tf
+1 0 0 1 58 82 Tm
+(Use this page to assign owners and target dates, then review status with leade) Tj
+ET
+0.210 0.310 0.430 rg
+BT
+/F1 10 Tf
+1 0 0 1 58 65 Tm
+(rship every month.) Tj
+ET
+0.84 0.89 0.95 rg
+40 34 532 1 re f
+0.280 0.360 0.480 rg
+BT
+/F1 10 Tf
+1 0 0 1 48 48 Tm
+(Future Beyond Technology  |  Startup Security Checklist) Tj
+ET
+
+endstream
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000133 00000 n 
+0000000203 00000 n 
+0000000278 00000 n 
+0000000414 00000 n 
+0000002891 00000 n 
+0000003027 00000 n 
+0000005504 00000 n 
+0000005641 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+8102
+%%EOF

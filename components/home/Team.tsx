@@ -32,7 +32,7 @@ const coreEngineering: TeamMember[] = [
   {
     name: "Jerold Benjamin",
     role: "AI Solutions Engineer",
-    bio: "Designs and implements AI chatbots, RAG pipelines, and automation solutions.",
+    bio: "Designs and implements AI chatbots, RAG pipelines, and automation workflows.",
     linkedinUrl: "",
   },
 ];
@@ -70,7 +70,7 @@ export default function Team() {
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-sm text-slate-600 dark:text-slate-400 sm:text-base">
               Our team combines deep engineering expertise with strategic
-              operations to deliver scalable technology solutions for clients.
+              operations to ship secure systems with measurable reliability improvements.
             </p>
           </header>
 

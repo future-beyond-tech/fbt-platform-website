@@ -3,19 +3,19 @@ import Container from "@/components/layout/Container";
 const capabilities = [
     {
         title: "Product Engineering",
-        desc: "Designing and building scalable, production-ready products with clean architecture.",
+        desc: "Scalable, production-ready systems. Recent: Migrated monolith to microservices handling 10K req/s.",
     },
     {
         title: "Security Engineering",
-        desc: "Threat modeling, vulnerability assessment, and secure-by-design systems.",
+        desc: "Threat modeling to penetration testing. Recent: Achieved SOC 2 Type II for healthcare client in 8 weeks.",
     },
     {
         title: "AI Automation",
-        desc: "Responsible AI applied to automation, analysis, and decision support.",
+        desc: "Responsible AI for process automation. Recent: Built RAG pipeline reducing research time by 70%.",
     },
     {
-        title: "Architecture & Consulting",
-        desc: "Guiding teams to make the right technical decisions early.",
+        title: "Architecture Consulting",
+        desc: "Technical decisions that last 5+ years. Recent: Designed event-driven system saving $30K/month in infrastructure.",
     },
 ];
 

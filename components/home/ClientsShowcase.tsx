@@ -104,6 +104,7 @@ export default function ClientsShowcase() {
                   src={`/Clients/${logoFile}`}
                   alt={`${formatClientName(logoFile)} logo`}
                   fill
+                  loading="lazy"
                   sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 92vw"
                   className={`object-contain p-2 sm:p-3 saturate-110 contrast-110 drop-shadow-[0_10px_20px_rgba(2,6,23,0.25)] transition-transform duration-500 ease-out ${getLogoScaleClass(logoFile)}`}
                 />

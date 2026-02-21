@@ -37,6 +37,13 @@ export default function AboutPage() {
                             security-critical organizations grow with confidence, today
                             and in the future.
                         </p>
+                        <p>
+                            We also build our own products to validate our engineering
+                            standards in real execution. Our FBT PG SaaS Platform and
+                            Vulnerability Assessment AI platform are active examples of
+                            how we implement Clean Architecture, CQRS, multi-tenancy,
+                            and security-first design in production-ready software.
+                        </p>
                     </div>
                 </div>
             </Container>
