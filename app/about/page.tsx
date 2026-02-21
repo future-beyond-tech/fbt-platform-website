@@ -1,8 +1,11 @@
-import Image from "next/image";
 import Container from "@/components/layout/Container";
 import Link from "next/link";
 import { defaultMetadata } from "@/lib/seo";
 import ShareButton from "@/components/ShareButton";
+import {
+  FounderImageHero,
+  FounderImageAvatar,
+} from "@/components/about/FounderImage";
 
 export const metadata = defaultMetadata(
   "About",
@@ -76,14 +79,7 @@ export default function AboutPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
             <div className="relative">
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800">
-                <Image
-                  src="/about/Founder.png"
-                  alt="Feroze Basha, Founder and Lead Engineer at FBT"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  priority
-                />
+                <FounderImageHero />
               </div>
               <div className="absolute -bottom-5 -right-5 flex h-24 w-24 items-center justify-center rounded-2xl border border-emerald-200 bg-emerald-50 dark:border-emerald-900/40 dark:bg-emerald-900/20">
                 <svg
@@ -135,13 +131,7 @@ export default function AboutPage() {
 
               <div className="mt-7 flex items-center gap-4">
                 <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-slate-200 dark:border-slate-700">
-                  <Image
-                    src="/about/Founder.png"
-                    alt=""
-                    width={48}
-                    height={48}
-                    className="object-cover"
-                  />
+                  <FounderImageAvatar />
                 </div>
                 <div>
                   <p className="text-base font-semibold text-slate-900 dark:text-slate-100">
