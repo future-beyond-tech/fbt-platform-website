@@ -1,4 +1,5 @@
 import Container from "@/components/layout/Container";
+import Link from "next/link";
 import { defaultMetadata } from "@/lib/seo";
 
 export const metadata = defaultMetadata(
@@ -44,6 +45,21 @@ export default function AboutPage() {
                             how we implement Clean Architecture, CQRS, multi-tenancy,
                             and security-first design in production-ready software.
                         </p>
+                    </div>
+
+                    <div className="flex flex-col gap-3 pt-2 sm:flex-row">
+                        <Link
+                            href="/how-we-work"
+                            className="inline-flex min-h-[44px] items-center justify-center rounded-lg border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
+                        >
+                            See How We Work
+                        </Link>
+                        <Link
+                            href="/assessment"
+                            className="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200"
+                        >
+                            Book Assessment
+                        </Link>
                     </div>
                 </div>
             </Container>
