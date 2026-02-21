@@ -23,6 +23,16 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/products/pg-saas",
+        destination: "/products/pg-management",
+        permanent: true,
+      },
+      {
+        source: "/products/pg-saas/:path*",
+        destination: "/products/pg-management/:path*",
+        permanent: true,
+      },
+      {
         source: "/products/pgsaas",
         destination: "/products/pg-management",
         permanent: true,
