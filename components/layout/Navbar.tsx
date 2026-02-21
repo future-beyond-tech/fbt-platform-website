@@ -58,10 +58,11 @@ const navGroups: NavGroup[] = [
   {
     name: "Insights",
     items: [
+      { name: "Insights Hub", href: "/insights" },
       { name: "Research", href: "/research" },
       { name: "Resources", href: "/resources" },
       { name: "Case Studies", href: "/work" },
-      { name: "Technical Blog", href: "/blog" },
+      { name: "Medium Blog", href: "/insights" },
       {
         name: "Architecture Deep Dives",
         href: "/insights/architecture-deep-dives",

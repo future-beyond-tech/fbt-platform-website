@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "./Container";
 import { siteConfig } from "@/lib/siteConfig";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 
 const companyLinks = [
   { name: "About", href: "/about" },
@@ -12,10 +13,11 @@ const companyLinks = [
 ];
 
 const insightLinks = [
+  { name: "Insights Hub", href: "/insights" },
   { name: "Research", href: "/research" },
   { name: "Resources", href: "/resources" },
   { name: "Case Studies", href: "/work" },
-  { name: "Technical Blog", href: "/blog" },
+  { name: "Medium Blog", href: "/insights" },
   { name: "Architecture Deep Dives", href: "/insights/architecture-deep-dives" },
 ];
 
@@ -119,10 +121,28 @@ export default function Footer() {
           </section>
         </div>
 
-        <div className="mt-10 pt-8 border-t border-slate-200 dark:border-slate-800 text-center sm:text-left">
-          <p className="text-xs text-slate-500 dark:text-slate-500 sm:text-sm">
-            © {new Date().getFullYear()} Future Beyond Technology. All rights reserved.
-          </p>
+        <div className="mt-10 border-t border-slate-200 pt-8 dark:border-slate-800">
+          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+            <div className="flex items-center gap-3">
+              <span className="text-xs text-slate-500 dark:text-slate-400 sm:text-sm">
+                Follow our journey:
+              </span>
+              <TrackedExternalLink
+                href="https://medium.com/@futurebeyond.tech"
+                className="inline-flex min-h-[40px] items-center gap-2 rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
+                eventName="medium_profile_click"
+                eventParams={{ location: "footer" }}
+              >
+                <span>Medium</span>
+                <span className="text-xs">{"->"}</span>
+              </TrackedExternalLink>
+            </div>
+
+            <p className="text-xs text-slate-500 dark:text-slate-500 sm:text-sm">
+              © {new Date().getFullYear()} Future Beyond Technology. All rights
+              reserved.
+            </p>
+          </div>
         </div>
       </Container>
     </footer>

@@ -1,6 +1,7 @@
 import Hero from "@/components/home/Hero";
 import ZAuthSecurityHighlight from "@/components/home/ZAuthSecurityHighlight";
 import ResearchFeature from "@/components/home/ResearchFeature";
+import LatestMediumSection from "@/components/home/LatestMediumSection";
 import FeaturedProduct from "@/components/home/FeaturedProduct";
 import SampleProjects from "@/components/home/SampleProjects";
 import ClientsShowcase from "@/components/home/ClientsShowcase";
@@ -40,6 +41,7 @@ export default function HomePage() {
       <Hero />
       <ZAuthSecurityHighlight />
       <ResearchFeature />
+      <LatestMediumSection />
       <FeaturedProduct />
       <SampleProjects />
       <ClientsShowcase />
