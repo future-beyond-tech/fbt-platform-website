@@ -4,6 +4,7 @@ import Container from "@/components/layout/Container";
 import PageViewEvent from "@/components/analytics/PageViewEvent";
 import { defaultMetadata } from "@/lib/seo";
 import { ResearchDownloadModalTrigger } from "@/components/lead-magnets/ResearchDownloadModal";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 
 const title =
   "FBT Research | Security Engineering and Medical Device Cybersecurity";
@@ -147,6 +148,14 @@ export default function ResearchPage() {
               >
                 Security Services
               </Link>
+              <TrackedExternalLink
+                href="https://medium.com/@futurebeyond.tech"
+                className="inline-flex min-h-[44px] items-center justify-center rounded-lg border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-white dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
+                eventName="medium_profile_click"
+                eventParams={{ location: "research_hub_cta" }}
+              >
+                Follow Research on Medium {"->"}
+              </TrackedExternalLink>
             </div>
           </div>
         </Container>

@@ -16,6 +16,7 @@ const routes = [
   "/blog/pass-soc-2-in-8-weeks",
   "/research",
   "/research/medical-device-vulnerability-assessment",
+  "/insights",
   "/products",
   "/products/pg-management",
   "/products/pg-management/waitlist",
