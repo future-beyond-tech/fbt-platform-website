@@ -14,6 +14,8 @@ const routes = [
   "/blog/startup-security-mistakes-from-50-codebases",
   "/blog/build-vs-buy-ai-pipeline",
   "/blog/pass-soc-2-in-8-weeks",
+  "/research",
+  "/research/medical-device-vulnerability-assessment",
   "/products",
   "/products/pg-management",
   "/products/pg-management/waitlist",

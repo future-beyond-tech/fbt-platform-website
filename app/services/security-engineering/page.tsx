@@ -103,6 +103,30 @@ export default function SecurityEngineeringServicePage() {
               See ZAuthSecurity Details
             </Link>
           </section>
+
+          <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900 sm:p-8">
+            <div className="flex items-start gap-4">
+              <div className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
+                <span className="text-lg font-bold">R</span>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100">
+                  Latest Research: Medical Device Security
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:text-base">
+                  Comprehensive analysis of vulnerability assessment methodologies
+                  for medical devices, including passive scanning, healthcare
+                  risk scoring, and FDA-aligned compliance practices.
+                </p>
+                <Link
+                  href="/research/medical-device-vulnerability-assessment"
+                  className="mt-5 inline-flex min-h-[44px] items-center justify-center rounded-lg border border-emerald-300 px-5 py-2.5 text-sm font-semibold text-emerald-700 transition-colors hover:bg-emerald-50 dark:border-emerald-700 dark:text-emerald-300 dark:hover:bg-emerald-900/20"
+                >
+                  Read the Research
+                </Link>
+              </div>
+            </div>
+          </section>
         </div>
       </Container>
     </section>

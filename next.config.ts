@@ -9,8 +9,8 @@ const contentSecurityPolicy = [
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
   "style-src 'self' 'unsafe-inline'",
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://challenges.cloudflare.com https://client.crisp.chat https://code.tidio.co",
-  "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://vitals.vercel-insights.com https://challenges.cloudflare.com https://client.crisp.chat https://*.crisp.chat https://code.tidio.co https://api.tidio.co https://socket.tidio.co",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://assets.apollo.io https://challenges.cloudflare.com https://client.crisp.chat https://code.tidio.co",
+  "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://vitals.vercel-insights.com https://assets.apollo.io https://*.apollo.io https://challenges.cloudflare.com https://client.crisp.chat https://*.crisp.chat https://code.tidio.co https://api.tidio.co https://socket.tidio.co",
   "frame-src 'self' https://challenges.cloudflare.com",
   "upgrade-insecure-requests",
 ].join("; ");

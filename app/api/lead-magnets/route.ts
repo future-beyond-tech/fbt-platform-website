@@ -4,12 +4,24 @@ import { checkRateLimit, getClientIp } from "@/lib/rateLimit";
 
 const MAX_REQUESTS_PER_WINDOW = 12;
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
-const ALLOWED_TYPES = new Set(["security-checklist"]);
+const ALLOWED_TYPES = new Set(["security-checklist", "research-download"]);
+const ALLOWED_ROLES = new Set([
+  "security",
+  "compliance",
+  "product",
+  "executive",
+  "other",
+]);
 
 type LeadMagnetPayload = {
   email: string;
   type: string;
   source?: string;
+  firstName?: string;
+  lastName?: string;
+  company?: string;
+  role?: string;
+  research?: string;
 };
 
 type ValidationResult =
@@ -109,22 +121,28 @@ export async function POST(req: Request) {
           from: emailFrom,
           to: contactEmail,
           replyTo: sanitizeSingleLine(data.email),
-          subject: "New lead magnet signup: security-checklist",
+          subject: `New lead magnet signup: ${sanitizeSingleLine(data.type)}`,
           text: `Lead Magnet Signup
 Type: ${sanitizeSingleLine(data.type)}
 Email: ${sanitizeSingleLine(data.email)}
 Source: ${sanitizeSingleLine(data.source ?? "website")}
+First Name: ${sanitizeSingleLine(data.firstName ?? "not provided")}
+Last Name: ${sanitizeSingleLine(data.lastName ?? "not provided")}
+Company: ${sanitizeSingleLine(data.company ?? "not provided")}
+Role: ${sanitizeSingleLine(data.role ?? "not provided")}
+Research: ${sanitizeSingleLine(data.research ?? "not provided")}
 `,
         })
       );
     }
 
-    tasks.push(
-      resend.emails.send({
-        from: emailFrom,
-        to: sanitizeSingleLine(data.email),
-        subject: "Your Enterprise Auth Checklist",
-        text: `Thanks for requesting the Enterprise Auth Architecture Checklist.
+    if (data.type === "security-checklist") {
+      tasks.push(
+        resend.emails.send({
+          from: emailFrom,
+          to: sanitizeSingleLine(data.email),
+          subject: "Your Enterprise Auth Checklist",
+          text: `Thanks for requesting the Enterprise Auth Architecture Checklist.
 
 This checklist covers:
 - OAuth 2.0 and OIDC implementation guardrails
@@ -133,8 +151,28 @@ This checklist covers:
 
 Reply to this email if you want a live architecture review with the FBT team.
 `,
-      })
-    );
+        })
+      );
+    } else {
+      tasks.push(
+        resend.emails.send({
+          from: emailFrom,
+          to: sanitizeSingleLine(data.email),
+          subject: "Your FBT Medical Device Security Research Kit",
+          text: `Thanks for requesting the research package: ${sanitizeSingleLine(
+            data.research ?? "Medical Device Vulnerability Assessment"
+          )}.
+
+You now have access to:
+- FBT research summary on medical device vulnerability assessment
+- Medical device security checklist
+- Implementation guidance for vulnerability management workflows
+
+If you want support implementing this in your environment, reply to this email and we can schedule a technical consultation.
+`,
+        })
+      );
+    }
 
     await Promise.all(tasks);
     return NextResponse.json({ success: true }, { headers: responseHeaders });
@@ -156,6 +194,11 @@ function validatePayload(payload: unknown): ValidationResult {
   const email = normalizeText(body.email);
   const type = normalizeText(body.type);
   const source = normalizeText(body.source);
+  const firstName = normalizeText(body.firstName);
+  const lastName = normalizeText(body.lastName);
+  const company = normalizeText(body.company);
+  const role = normalizeText(body.role);
+  const research = normalizeText(body.research);
 
   if (!email || email.length > 254 || !isValidEmail(email)) {
     return { success: false, error: "Please provide a valid email address." };
@@ -169,9 +212,36 @@ function validatePayload(payload: unknown): ValidationResult {
     return { success: false, error: "Invalid source value." };
   }
 
+  if (type === "research-download") {
+    if (!firstName || firstName.length > 100) {
+      return { success: false, error: "Please provide a valid first name." };
+    }
+    if (!lastName || lastName.length > 100) {
+      return { success: false, error: "Please provide a valid last name." };
+    }
+    if (!company || company.length > 160) {
+      return { success: false, error: "Please provide a valid company name." };
+    }
+    if (!role || !ALLOWED_ROLES.has(role)) {
+      return { success: false, error: "Please select a valid role." };
+    }
+    if (research && research.length > 200) {
+      return { success: false, error: "Research title is too long." };
+    }
+  }
+
   return {
     success: true,
-    data: { email, type, source },
+    data: {
+      email,
+      type,
+      source,
+      firstName,
+      lastName,
+      company,
+      role,
+      research,
+    },
   };
 }
 

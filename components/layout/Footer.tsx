@@ -10,6 +10,7 @@ const companyLinks = [
 ];
 
 const insightLinks = [
+  { name: "Research", href: "/research" },
   { name: "Case Studies", href: "/work" },
   { name: "Technical Blog", href: "/blog" },
   { name: "Architecture Deep Dives", href: "/insights/architecture-deep-dives" },

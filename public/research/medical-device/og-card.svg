@@ -1,0 +1,17 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0F172A"/>
+  <circle cx="1070" cy="110" r="180" fill="#F59E0B" fill-opacity="0.2"/>
+  <circle cx="130" cy="560" r="180" fill="#10B981" fill-opacity="0.18"/>
+  <text x="90" y="150" fill="#FDE68A" font-size="26" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    FBT RESEARCH
+  </text>
+  <text x="90" y="245" fill="#F8FAFC" font-size="54" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Medical Device Vulnerability
+  </text>
+  <text x="90" y="315" fill="#F8FAFC" font-size="54" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Assessment
+  </text>
+  <text x="90" y="395" fill="#CBD5E1" font-size="30" font-family="Arial, Helvetica, sans-serif">
+    Methodologies, risk scoring, and compliance context
+  </text>
+</svg>
