@@ -3,6 +3,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ExperienceEnhancements from "@/components/layout/ExperienceEnhancements";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import { defaultMetadata } from "@/lib/seo";
 import { organizationAndServiceSchema } from "@/lib/structuredData";
@@ -51,6 +52,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <ExperienceEnhancements />
         <Analytics />
+        <SpeedInsights />
         <Footer />
       </body>
     </html>
