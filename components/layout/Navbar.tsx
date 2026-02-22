@@ -185,12 +185,14 @@ export default function Navbar() {
 
                   <div
                     id={desktopMenuId}
-                    className={`absolute left-0 top-full z-20 mt-2 w-80 rounded-xl border border-slate-200 bg-white p-3 shadow-xl transition-all duration-150 dark:border-slate-700 dark:bg-slate-900 ${
+                    role="menu"
+                    className={`absolute left-0 top-full z-20 mt-2 w-80 max-h-[min(70vh,28rem)] flex flex-col rounded-xl border border-slate-200 bg-white shadow-xl transition-all duration-150 dark:border-slate-700 dark:bg-slate-900 ${
                       isDesktopGroupOpen
                         ? "visible opacity-100"
                         : "invisible opacity-0"
                     }`}
                   >
+                    <div className="overflow-y-auto overscroll-contain p-3 [scrollbar-gutter:stable]">
                     {group.items.map((item) => (
                       <Link
                         key={item.name}
@@ -215,6 +217,7 @@ export default function Navbar() {
                         )}
                       </Link>
                     ))}
+                    </div>
                   </div>
                 </div>
               );
@@ -248,9 +251,12 @@ export default function Navbar() {
         {isMenuOpen && (
           <div
             id="mobile-nav"
-            className="border-t border-slate-200 py-3 md:hidden dark:border-slate-800"
+            className="border-t border-slate-200 md:hidden dark:border-slate-800 max-h-[calc(100vh-4rem)] min-h-0 flex flex-col overflow-hidden"
           >
-            <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
+            <nav
+              className="flex flex-col gap-1 overflow-y-auto overscroll-contain py-3 pb-[env(safe-area-inset-bottom)] [scrollbar-gutter:stable]"
+              aria-label="Mobile navigation"
+            >
               {navGroups.map((group) => (
                 <div
                   key={group.name}

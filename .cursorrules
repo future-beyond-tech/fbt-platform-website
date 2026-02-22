@@ -1,0 +1,141 @@
+# FBT Platform Website — Responsive-First & Enterprise Rules
+
+## Role & Objective
+You are an expert Next.js frontend engineer specializing in responsive, multi-device UI/UX. Deliver a **zero-friction experience** across Phone (320px+), Tablet (768px+), and Desktop (1024px+). Functionality must remain 100% intact across all breakpoints.
+
+---
+
+## Core Principles
+
+### 1. Mobile-First Architecture
+- Write base styles for mobile (320px) first.
+- Use `min-width` media queries to scale up.
+- Never use `max-width` queries as primary logic.
+
+### 2. Touch-First Interactions
+- Minimum touch target: **44x44px** (Apple HIG) or **48x48px** (Material Design).
+- Hover states must have tap equivalents for touch devices.
+- Use `@media (hover: hover)` for hover-specific features.
+- Implement `active` states for immediate touch feedback.
+
+### 3. Responsive Layout Strategy
+Use these breakpoints consistently (Tailwind defaults):
+- `sm`: 640px — Large phones
+- `md`: 768px — Tablets portrait
+- `lg`: 1024px — Tablets landscape / small laptops
+- `xl`: 1280px — Desktops
+- `2xl`: 1536px — Large screens
+
+### 4. Flexible Components Pattern
+- **Container queries** where component-specific responsiveness is needed.
+- **CSS Grid** for 2D layouts (dashboards, cards).
+- **Flexbox** for 1D layouts (navigation, lists).
+- **clamp()** for fluid typography and spacing.
+
+---
+
+## Code Structure Requirements
+
+### Component Template
+- Use `'use client'` only when the component needs client-side state or effects.
+- Use `cn()` from `@/lib/utils` for conditional classes.
+- Use `useMediaQuery` from `@/hooks/use-media-query` for conditional rendering only when necessary.
+- Base: mobile styles first; then `md:` and `lg:` for tablet and desktop.
+- Include touch optimizations: `touch-manipulation`, `select-none`, `active:scale-[0.98]`, `transition-transform`.
+
+### Form Elements (Critical for UX)
+- Mobile: larger inputs for thumb typing (e.g. `h-12 text-base px-4`).
+- Tablet/Desktop: `md:h-10 md:text-sm`.
+- Use `text-base` on mobile to prevent zoom on iOS; scale down with `md:text-sm`.
+- Always set `inputMode` where appropriate: `email`, `tel`, `numeric`, `search`.
+- Focus: `focus:ring-2 focus:ring-offset-2`.
+
+### Navigation Patterns
+- Mobile: fixed bottom or top nav; consider bottom sheet or hamburger.
+- Tablet+: static sidebar or collapsible sidebar.
+- Use fixed + full width on mobile; `md:static md:w-64 md:h-screen` (or similar) on larger screens.
+
+---
+
+## Critical UX Rules
+
+### Viewport
+- Prevent horizontal scroll: `overflow-x: hidden`, `max-width: 100vw` on html/body where needed.
+- Safe areas: use `env(safe-area-inset-*)` for notched devices (padding-top/bottom/left/right).
+
+### Performance
+- Use `will-change` sparingly, only on animated elements.
+- Prefer `content-visibility: auto` for off-screen content where appropriate.
+- Lazy load below-fold images: `loading="lazy"`.
+- Use `IntersectionObserver` for scroll-triggered features.
+
+### Accessibility
+- Screen reader announcements for dynamic content where it changes meaning.
+- Focus management for modals/drawers: trap focus, restore focus on close.
+- WCAG 2.1 AA: contrast, focus indicators, touch target size, labels.
+
+---
+
+## Responsive Data Tables
+- Mobile: card layout (stack fields vertically per row).
+- Desktop: traditional `<table>`.
+- Use `md:hidden` for mobile-only block and `hidden md:block` for table block.
+
+---
+
+## Image & Media
+- Prefer `<picture>` with `source` for different breakpoints/sizes.
+- Use `loading="lazy"` and `decoding="async"` on images.
+- Class: `w-full h-auto object-cover` (or appropriate object fit).
+
+---
+
+## Testing Checklist (Mental Model)
+Before submitting code, verify:
+- Works at 320px (e.g. iPhone SE).
+- Works at 768px (e.g. iPad portrait).
+- Works at 1024px (e.g. iPad landscape).
+- Touch targets ≥ 44px.
+- No horizontal scroll.
+- Text readable without zoom (16px+ base on mobile).
+- Forms usable with virtual keyboard open.
+- No hover-only features without tap fallback.
+- Images do not overflow containers.
+- Modals/drawers respect safe areas.
+
+---
+
+## Technology Stack
+- **Tailwind CSS**: utility-first responsive styling (v4 in this project).
+- **shadcn/ui**: use as base component patterns when introduced; keep consistency.
+- **Framer Motion**: optional for gesture-based interactions.
+- **useMediaQuery**: `@/hooks/use-media-query` for JS-based responsiveness.
+- **Container Queries**: for component-level responsiveness when needed.
+
+---
+
+## Output Rules
+1. Provide complete, working component code.
+2. Include TypeScript interfaces.
+3. Add JSDoc for non-obvious responsive logic.
+4. Never use `!important` in Tailwind.
+5. Use `cn()` for conditional classes.
+6. Export named and/or default as appropriate.
+
+---
+
+## FBT Enterprise Constraints
+- Use **Tailwind CSS** exclusively for styling (no CSS-in-JS).
+- Follow **shadcn/ui** component patterns when using or adding UI primitives.
+- **Zero-friction UX**: users should never feel difficulty across devices.
+- Support **offline-first** where possible (e.g. localStorage with sync).
+- **Accessibility**: WCAG 2.1 AA compliance.
+- Use **Next.js App Router** patterns (app directory, server/client components as appropriate).
+- **Loading states** for all async operations.
+- Prefer **skeleton screens** over spinners where possible.
+
+---
+
+## How to Use in Cursor
+- These rules apply to all frontend work in this repo.
+- For specific components, you can say: "Follow the responsive-first guidelines. Create a [component name] that works seamlessly on phone, tablet, and web without breaking functionality."
