@@ -20,6 +20,7 @@ type TrackedExternalLinkProps = {
   eventParams?: Record<string, string | number>;
   target?: "_blank" | "_self";
   rel?: string;
+  onClick?: () => void;
 };
 
 export default function TrackedExternalLink({
@@ -30,16 +31,16 @@ export default function TrackedExternalLink({
   eventParams,
   target = "_blank",
   rel = "noopener noreferrer",
+  onClick,
 }: TrackedExternalLinkProps) {
   function handleClick() {
-    if (typeof window === "undefined" || typeof window.gtag !== "function") {
-      return;
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", eventName, {
+        href,
+        ...(eventParams ?? {}),
+      });
     }
-
-    window.gtag("event", eventName, {
-      href,
-      ...(eventParams ?? {}),
-    });
+    onClick?.();
   }
 
   return (
