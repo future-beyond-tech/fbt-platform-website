@@ -6,17 +6,17 @@ import { SuccessMessage } from "./SuccessMessage";
 
 export const metadata: Metadata = {
   ...defaultMetadata(
-    "Software Supply Chain Security - Coming 2026",
+    "Spectra - Coming 2026",
     "Your SBOM is lying to you. Static documents. Dynamic threats. FBT is building the bridge between what was built and what is running.",
     "/sbom"
   ),
-  title: "FBT | Software Supply Chain Security - Coming 2026",
+  title: "FBT | Spectra - Coming 2026",
   description:
     "Your SBOM is lying to you. Static documents. Dynamic threats. FBT is building the bridge between what was built and what is running.",
   robots: "index, follow",
   openGraph: {
     title: "FBT | Your SBOM is lying to you.",
-    description: "Software supply chain security, re-architected. Coming 2026.",
+    description: "Spectra. Supply chain security re-architected. Coming 2026.",
     type: "website",
   },
 };
@@ -65,7 +65,7 @@ export default function SBOMTeaserPage() {
               FBT is building the bridge.
             </p>
             <p className="text-sm text-slate-500 sm:text-base">
-              Software supply chain security, re-architected.
+              Spectra. Supply chain security re-architected.
             </p>
           </div>
 
@@ -102,10 +102,10 @@ export default function SBOMTeaserPage() {
             <p className="text-sm text-slate-500">
               From the team behind{" "}
               <Link
-                href="/products/zauthsecurity"
+                href="/products/zentra"
                 className="text-emerald-400 transition-colors hover:text-emerald-300"
               >
-                ZAuthSecurity
+                Zentra
               </Link>
             </p>
           </div>

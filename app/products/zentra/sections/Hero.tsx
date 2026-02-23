@@ -21,7 +21,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 text-lg leading-relaxed text-slate-300 sm:text-xl">
-            We built <strong>ZAuthSecurity</strong> to support high-stakes product
+            We built <strong>Zentra</strong> to support high-stakes product
             environments. Now we design custom identity systems for companies
             that cannot afford security gaps, lockouts, or compliance failures.
           </p>
@@ -31,7 +31,7 @@ export function Hero() {
               href="/assessment"
               eventName="cta_click"
               eventParams={{
-                page: "/products/zauthsecurity",
+                page: "/products/zentra",
                 type: "architecture-review",
                 section: "hero",
               }}
@@ -40,7 +40,7 @@ export function Hero() {
               Book Architecture Review
             </TrackedCtaLink>
             <SecurityChecklistModalTrigger
-              source="zauthsecurity-hero"
+              source="zentra-hero"
               buttonLabel="Download Security Standards"
               className="inline-flex min-h-[48px] items-center justify-center rounded-lg border border-slate-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
             />

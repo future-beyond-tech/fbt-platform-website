@@ -23,15 +23,15 @@ const proofItems = [
 
 export function CaseStudy() {
   return (
-    <section className="bg-slate-900 py-20 text-white" aria-labelledby="zauth-proof-cases-heading">
+    <section className="bg-slate-900 py-20 text-white" aria-labelledby="zentra-proof-cases-heading">
       <Container>
         <div className="space-y-12">
           <header className="text-center">
-            <h2 id="zauth-proof-cases-heading" className="text-3xl font-semibold">
+            <h2 id="zentra-proof-cases-heading" className="text-3xl font-semibold">
               Real-World Proof
             </h2>
             <p className="mt-4 text-slate-300">
-              ZAuthSecurity powers our own product roadmap. The same architecture
+              Zentra powers our own product roadmap. The same architecture
               approach can secure your platform.
             </p>
           </header>

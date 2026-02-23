@@ -2,7 +2,7 @@ import Container from "@/components/layout/Container";
 
 const faqs = [
   {
-    question: "Can we buy ZAuthSecurity as an off-the-shelf product?",
+    question: "Can we buy Zentra as an off-the-shelf product?",
     answer:
       "Not as a generic packaged SKU. We license and customize architecture patterns for enterprise environments or build equivalent systems tailored to your stack and compliance needs.",
   },
@@ -35,11 +35,11 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section className="bg-slate-50 py-20 dark:bg-slate-900/50" aria-labelledby="zauth-faq-heading">
+    <section className="bg-slate-50 py-20 dark:bg-slate-900/50" aria-labelledby="zentra-faq-heading">
       <Container>
         <div className="mx-auto max-w-3xl space-y-6">
           <h2
-            id="zauth-faq-heading"
+            id="zentra-faq-heading"
             className="text-center text-3xl font-semibold text-slate-900 dark:text-slate-100"
           >
             Frequently Asked Questions

@@ -87,7 +87,7 @@ export function SecurityChecklistModalTrigger({
           setIsOpen(true);
           if (typeof window !== "undefined" && typeof window.gtag === "function") {
             window.gtag("event", "cta_click", {
-              page: "/products/zauthsecurity",
+              page: "/products/zentra",
               type: "download-checklist",
               source,
             });

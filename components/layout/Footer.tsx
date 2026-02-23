@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Container from "./Container";
-import { siteConfig, rentFlowOfficialUrl } from "@/lib/siteConfig";
+import { siteConfig, rentFlowOfficialUrl, vyxnosResearchUrl } from "@/lib/siteConfig";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
 
 const companyLinks = [
@@ -23,9 +23,14 @@ const insightLinks = [
 
 const productCards = [
   {
-    name: "ZAuthSecurity",
-    href: "/products/zauthsecurity",
+    name: "Zentra",
+    href: "/products/zentra",
     status: "Security Expertise",
+  },
+  {
+    name: "VYXNOS",
+    href: vyxnosResearchUrl,
+    status: "Autonomous Security Intelligence",
   },
   {
     name: "RentFlow",
@@ -39,7 +44,7 @@ const productCards = [
     status: "Release Aug 2026",
   },
   {
-    name: "Supply Chain (Soon)",
+    name: "Spectra (Soon)",
     href: "/sbom",
     status: "Coming 2026",
   },
@@ -109,22 +114,40 @@ export default function Footer() {
               Built by FBT
             </p>
             <div className="mt-3 space-y-3">
-              {productCards.map((item) => (
-                <div
-                  key={item.name}
-                  className="rounded-xl border border-slate-200 bg-white p-3 dark:border-slate-700 dark:bg-slate-900"
-                >
-                  <Link
-                    href={item.href}
-                    className="block transition-colors hover:opacity-90 focus-visible:rounded focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50"
-                  >
+              {productCards.map((item) => {
+                const isExternal = item.href.startsWith("http");
+                const cardContent = (
+                  <>
                     <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
                       {item.name}
                     </p>
                     <p className="mt-1 text-xs font-medium text-emerald-700 dark:text-emerald-400">
                       {item.status}
                     </p>
-                  </Link>
+                  </>
+                );
+                return (
+                <div
+                  key={item.name}
+                  className="rounded-xl border border-slate-200 bg-white p-3 dark:border-slate-700 dark:bg-slate-900"
+                >
+                  {isExternal ? (
+                    <TrackedExternalLink
+                      href={item.href}
+                      className="block transition-colors hover:opacity-90 focus-visible:rounded focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50"
+                      eventName="vyxnos_footer_click"
+                      eventParams={{ location: "footer" }}
+                    >
+                      {cardContent}
+                    </TrackedExternalLink>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="block transition-colors hover:opacity-90 focus-visible:rounded focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50"
+                    >
+                      {cardContent}
+                    </Link>
+                  )}
                   {"officialSiteUrl" in item && item.officialSiteUrl && (
                     <TrackedExternalLink
                       href={item.officialSiteUrl}
@@ -136,7 +159,8 @@ export default function Footer() {
                     </TrackedExternalLink>
                   )}
                 </div>
-              ))}
+                );
+              })}
             </div>
           </section>
         </div>

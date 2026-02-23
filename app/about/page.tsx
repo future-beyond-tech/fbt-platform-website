@@ -122,7 +122,7 @@ export default function AboutPage() {
               </blockquote>
 
               <p className="mt-7 text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:text-base">
-                Every product we&apos;ve built&mdash;ZAuthSecurity, RentFlow,
+                Every product we&apos;ve built&mdash;Zentra, RentFlow,
                 VulnAI&mdash;started with the same
                 question: &quot;Will this architecture survive 5 years of
                 scale?&quot; If the answer isn&apos;t an immediate yes, we

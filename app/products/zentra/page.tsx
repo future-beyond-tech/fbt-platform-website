@@ -12,8 +12,8 @@ import TrackedExternalLink from "@/components/TrackedExternalLink";
 
 const pageTitle = "Enterprise Authentication Architecture | FBT Security Expertise";
 const pageDescription =
-  "We built ZAuthSecurity, an enterprise OAuth 2.0 and OIDC framework for high-throughput multi-tenant systems. Now we architect custom identity systems for companies that cannot afford security failures.";
-const baseMetadata = defaultMetadata(pageTitle, pageDescription, "/products/zauthsecurity");
+  "We built Zentra, an enterprise OAuth 2.0 and OIDC framework for high-throughput multi-tenant systems. Now we architect custom identity systems for companies that cannot afford security failures.";
+const baseMetadata = defaultMetadata(pageTitle, pageDescription, "/products/zentra");
 
 export const metadata: Metadata = {
   ...baseMetadata,
@@ -27,30 +27,30 @@ export const metadata: Metadata = {
   openGraph: {
     ...baseMetadata.openGraph,
     title: "Enterprise Authentication Architecture | FBT",
-    description: "Custom auth systems built by engineers who shipped ZAuthSecurity.",
+    description: "Custom auth systems built by engineers who shipped Zentra.",
     images: [
       {
-        url: "/products/zauthsecurity/og-card.svg",
+        url: "/products/zentra/og-card.svg",
         width: 1200,
         height: 630,
-        alt: "FBT ZAuthSecurity security expertise",
+        alt: "FBT Zentra security expertise",
       },
     ],
   },
   twitter: {
     ...baseMetadata.twitter,
     title: "Enterprise Authentication Architecture | FBT",
-    description: "Custom auth systems built by engineers who shipped ZAuthSecurity.",
-    images: ["/products/zauthsecurity/og-card.svg"],
+    description: "Custom auth systems built by engineers who shipped Zentra.",
+    images: ["/products/zentra/og-card.svg"],
   },
 };
 
-const zauthSchema = {
+const zentraSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Service",
-      name: "ZAuthSecurity Architecture Services",
+      name: "Zentra Architecture Services",
       serviceType: "Authentication and Identity Architecture",
       provider: {
         "@type": "Organization",
@@ -58,19 +58,19 @@ const zauthSchema = {
         url: "https://futurebeyondtech.com",
       },
       areaServed: "Global",
-      url: "https://futurebeyondtech.com/products/zauthsecurity",
+      url: "https://futurebeyondtech.com/products/zentra",
       description:
         "Enterprise authentication architecture and modernization services for OAuth 2.0, OIDC, MFA, RBAC, and audit-compliant identity systems.",
     },
   ],
 };
 
-export default function ZAuthSecurityPage() {
+export default function ZentraPage() {
   return (
     <article className="min-h-screen bg-white dark:bg-slate-950">
       <PageViewEvent
-        pagePath="/products/zauthsecurity"
-        pageTitle="ZAuthSecurity Security Expertise"
+        pagePath="/products/zentra"
+        pageTitle="Zentra Security Expertise"
       />
       <Hero />
       <Proof />
@@ -91,7 +91,7 @@ export default function ZAuthSecurityPage() {
             href="https://medium.com/tag/security-engineering"
             className="mt-6 inline-flex min-h-[44px] items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:border-emerald-500 hover:text-emerald-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-emerald-500 dark:hover:text-emerald-400"
             eventName="medium_topic_click"
-            eventParams={{ topic: "security-engineering", location: "zauth_page" }}
+            eventParams={{ topic: "security-engineering", location: "zentra_page" }}
           >
             Security Engineering on Medium {"->"}
           </TrackedExternalLink>
@@ -102,7 +102,7 @@ export default function ZAuthSecurityPage() {
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(zauthSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(zentraSchema) }}
       />
     </article>
   );

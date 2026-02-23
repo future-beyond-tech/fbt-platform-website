@@ -1,7 +1,7 @@
 import Hero from "@/components/home/Hero";
 import FlagshipProductRentFlow from "@/components/home/FlagshipProductRentFlow";
 import InfrastructureThesis from "@/components/home/InfrastructureThesis";
-import ZAuthSecurityHighlight from "@/components/home/ZAuthSecurityHighlight";
+import ZentraHighlight from "@/components/home/ZentraHighlight";
 import ResearchFeature from "@/components/home/ResearchFeature";
 import LatestMediumSection from "@/components/home/LatestMediumSection";
 import FeaturedProduct from "@/components/home/FeaturedProduct";
@@ -63,8 +63,8 @@ export default function HomePage() {
       <Hero />
       <FlagshipProductRentFlow />
       <InfrastructureThesis />
-      <ZAuthSecurityHighlight />
       <ResearchFeature />
+      <ZentraHighlight />
       <LatestMediumSection />
       <FeaturedProduct />
       <SampleProjects />

@@ -6,7 +6,7 @@ const services = [
     icon: "A1",
     title: "Custom Auth Development",
     description:
-      "Build a ZAuthSecurity-equivalent identity foundation for your stack with OAuth 2.0, OIDC, MFA, RBAC, and audit controls.",
+      "Build a Zentra-equivalent identity foundation for your stack with OAuth 2.0, OIDC, MFA, RBAC, and audit controls.",
     timeline: "8-12 weeks",
     investment: "From $80K",
   },
@@ -30,12 +30,12 @@ const services = [
 
 export function Services() {
   return (
-    <section className="bg-slate-50 py-20 dark:bg-slate-900/50" aria-labelledby="zauth-services-heading">
+    <section className="bg-slate-50 py-20 dark:bg-slate-900/50" aria-labelledby="zentra-services-heading">
       <Container>
         <div className="space-y-12">
           <header className="mx-auto max-w-3xl text-center">
             <h2
-              id="zauth-services-heading"
+              id="zentra-services-heading"
               className="text-3xl font-semibold text-slate-900 dark:text-slate-100"
             >
               How We Help You
@@ -85,7 +85,7 @@ export function Services() {
                   href="/contact"
                   eventName="cta_click"
                   eventParams={{
-                    page: "/products/zauthsecurity",
+                    page: "/products/zentra",
                     type: "schedule-consultation",
                     service: service.title,
                   }}

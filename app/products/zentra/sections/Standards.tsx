@@ -33,12 +33,12 @@ const standards = [
 
 export function Standards() {
   return (
-    <section className="py-20 sm:py-24" aria-labelledby="zauth-standards-heading">
+    <section className="py-20 sm:py-24" aria-labelledby="zentra-standards-heading">
       <Container>
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-start lg:gap-16">
           <div>
             <h2
-              id="zauth-standards-heading"
+              id="zentra-standards-heading"
               className="text-3xl font-semibold text-slate-900 dark:text-slate-100"
             >
               How We Build Security
@@ -48,7 +48,7 @@ export function Standards() {
               longevity, compliance, and operational control.
             </p>
             <SecurityChecklistModalTrigger
-              source="zauthsecurity-standards"
+              source="zentra-standards"
               buttonLabel="Download Security Standards Checklist"
               className="mt-7 inline-flex min-h-[44px] items-center justify-center rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200"
             />

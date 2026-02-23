@@ -63,11 +63,11 @@ export default function SecurityEngineeringServicePage() {
 
           <section className="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-700 dark:bg-slate-800/40 sm:p-8">
             <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
-              ZAuthSecurity Proof
+              Zentra Proof
             </h2>
             <p className="mt-4 text-base leading-relaxed text-slate-700 dark:text-slate-300">
               While many firms discuss security in theory, we built{" "}
-              <strong>ZAuthSecurity</strong> as a production-grade identity
+              <strong>Zentra</strong> as a production-grade identity
               architecture baseline for our own product platforms.
             </p>
             <div className="mt-7 grid gap-4 md:grid-cols-3">
@@ -97,10 +97,10 @@ export default function SecurityEngineeringServicePage() {
               </article>
             </div>
             <Link
-              href="/products/zauthsecurity"
+              href="/products/zentra"
               className="mt-7 inline-flex min-h-[44px] items-center justify-center rounded-lg border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
             >
-              See ZAuthSecurity Details
+              See Zentra Details
             </Link>
           </section>
 

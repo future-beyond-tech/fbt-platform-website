@@ -10,7 +10,7 @@ export type StaticMediumArticle = {
 
 export const fallbackArticles: StaticMediumArticle[] = [
   {
-    title: "Building ZAuthSecurity: Enterprise OAuth 2.0 from Scratch",
+    title: "Building Zentra: Enterprise OAuth 2.0 from Scratch",
     link: "https://medium.com/@futurebeyond.tech",
     pubDate: "February 2025",
     categories: ["Security Engineering", "OAuth 2.0"],

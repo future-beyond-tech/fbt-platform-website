@@ -57,6 +57,53 @@ export default function ResearchPage() {
 
             <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
               <div className="mb-4 flex flex-wrap items-center gap-2">
+                <span className="rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-teal-900 dark:bg-teal-900/50 dark:text-teal-200">
+                  AI-Native Security
+                </span>
+                <span className="text-sm text-slate-500 dark:text-slate-400">
+                  FBT Research
+                </span>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
+                VYXNOS — Autonomous Security Intelligence Platform
+              </h3>
+
+              <p className="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+                Market analysis and implementation strategy for AI-native global security
+                infrastructure: edge-native inference, WASM plugin architecture, autonomous
+                predictive defense, and the 20-stage blueprint. A product by FBT Technologies.
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-2">
+                {[
+                  "VYXNOS",
+                  "Autonomous Security",
+                  "Edge AI",
+                  "WASM",
+                  "Market Analysis",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded bg-slate-100 px-2 py-1 text-xs text-slate-600 dark:bg-slate-800 dark:text-slate-300"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="/research/vyxnos"
+                  className="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200"
+                >
+                  Read Full Research
+                </Link>
+              </div>
+            </article>
+
+            <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+              <div className="mb-4 flex flex-wrap items-center gap-2">
                 <span className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-900">
                   Risk Management
                 </span>

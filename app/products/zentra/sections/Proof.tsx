@@ -42,18 +42,18 @@ const capabilities = [
 
 export function Proof() {
   return (
-    <section className="py-20 sm:py-24" aria-labelledby="zauth-proof-heading">
+    <section className="py-20 sm:py-24" aria-labelledby="zentra-proof-heading">
       <Container>
         <div className="space-y-12">
           <header className="mx-auto max-w-3xl text-center">
             <h2
-              id="zauth-proof-heading"
+              id="zentra-proof-heading"
               className="text-3xl font-semibold text-slate-900 dark:text-slate-100"
             >
               Built for Real Product Pressure
             </h2>
             <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
-              We built ZAuthSecurity because our own platforms needed enterprise
+              We built Zentra because our own platforms needed enterprise
               identity controls from day one. The same architecture discipline is
               now available to your team.
             </p>
@@ -91,8 +91,8 @@ export function Proof() {
             </p>
             <div className="mt-4 overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700">
               <Image
-                src="/products/zauthsecurity/architecture-overview.svg"
-                alt="ZAuthSecurity architecture overview diagram"
+                src="/products/zentra/architecture-overview.svg"
+                alt="Zentra architecture overview diagram"
                 width={1400}
                 height={760}
                 className="h-auto w-full"

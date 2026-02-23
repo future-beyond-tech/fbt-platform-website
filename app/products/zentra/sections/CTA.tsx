@@ -4,11 +4,11 @@ import { SecurityChecklistModalTrigger } from "@/components/lead-magnets/Securit
 
 export function CTA() {
   return (
-    <section className="bg-emerald-500 py-20" aria-labelledby="zauth-cta-heading">
+    <section className="bg-emerald-500 py-20" aria-labelledby="zentra-cta-heading">
       <Container>
         <div className="mx-auto max-w-4xl text-center">
           <h2
-            id="zauth-cta-heading"
+            id="zentra-cta-heading"
             className="text-3xl font-semibold text-white sm:text-4xl"
           >
             Don&apos;t Let Authentication Become Your Weak Link
@@ -22,7 +22,7 @@ export function CTA() {
               href="/assessment"
               eventName="cta_click"
               eventParams={{
-                page: "/products/zauthsecurity",
+                page: "/products/zentra",
                 type: "book-architecture-review",
                 section: "final-cta",
               }}
@@ -31,7 +31,7 @@ export function CTA() {
               Book Free Architecture Review
             </TrackedCtaLink>
             <SecurityChecklistModalTrigger
-              source="zauthsecurity-final-cta"
+              source="zentra-final-cta"
               buttonLabel="Download Standards Checklist"
               className="inline-flex min-h-[48px] items-center justify-center rounded-lg border border-white px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-emerald-600"
             />

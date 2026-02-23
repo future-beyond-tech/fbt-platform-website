@@ -15,3 +15,6 @@ export const rentFlowOfficialUrl = "https://rentflow.in";
 
 /** Contact path for requesting investor brief (selective capital conversations) */
 export const investorBriefUrl = "/contact?type=investor-brief";
+
+/** VYXNOS — Autonomous Security Intelligence Platform research site */
+export const vyxnosResearchUrl = "https://vyxnos.com";

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Container from "./Container";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
-import { rentFlowOfficialUrl } from "@/lib/siteConfig";
+import { rentFlowOfficialUrl, vyxnosResearchUrl } from "@/lib/siteConfig";
 
 type NavLinkItem = {
   name: string;
@@ -37,9 +37,14 @@ const navGroups: NavGroup[] = [
         badge: "flagship",
       },
       {
-        name: "Security Expertise",
-        href: "/products/zauthsecurity",
+        name: "Zentra",
+        href: "/products/zentra",
         description: "Enterprise auth architecture",
+      },
+      {
+        name: "VYXNOS",
+        href: vyxnosResearchUrl,
+        description: "Autonomous Security Intelligence Platform",
       },
       {
         name: "VulnAI",
@@ -48,7 +53,7 @@ const navGroups: NavGroup[] = [
         badge: "in-development",
       },
       {
-        name: "Supply Chain Security",
+        name: "Spectra",
         href: "/sbom",
         description: "Coming 2026",
         badge: "in-development",
@@ -201,54 +206,88 @@ export default function Navbar() {
                     }`}
                   >
                     <div className="overflow-y-auto overscroll-contain p-3 [scrollbar-gutter:stable]">
-                    {group.items.map((item) =>
-                      item.officialSiteUrl ? (
-                        <div
-                          key={item.name}
-                          className={`rounded-lg border p-3 ${
-                            pathname.startsWith(item.href)
-                              ? "border-slate-300 bg-slate-100 dark:border-slate-600 dark:bg-slate-800"
-                              : "border-transparent hover:border-slate-300 hover:bg-slate-50 dark:hover:border-slate-600 dark:hover:bg-slate-800"
-                          }`}
-                        >
-                          <Link
+                    {group.items.map((item) => {
+                      const isExternal = item.href.startsWith("http");
+                      if (item.officialSiteUrl) {
+                        return (
+                          <div
+                            key={item.name}
+                            className={`rounded-lg border p-3 ${
+                              pathname.startsWith(item.href)
+                                ? "border-slate-300 bg-slate-100 dark:border-slate-600 dark:bg-slate-800"
+                                : "border-transparent hover:border-slate-300 hover:bg-slate-50 dark:hover:border-slate-600 dark:hover:bg-slate-800"
+                            }`}
+                          >
+                            <Link
+                              href={item.href}
+                              onClick={() => {
+                                setIsMenuOpen(false);
+                                setOpenDesktopGroup(null);
+                              }}
+                              className="block focus-visible:rounded focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50"
+                            >
+                              <div className="flex flex-wrap items-center gap-2">
+                                <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                                  {item.name}
+                                </p>
+                                {item.badge === "flagship" && (
+                                  <span className="rounded bg-emerald-100 px-1.5 py-0.5 text-[10px] font-medium text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300">
+                                    Flagship
+                                  </span>
+                                )}
+                              </div>
+                              {item.description && (
+                                <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
+                                  {item.description}
+                                </p>
+                              )}
+                            </Link>
+                            <TrackedExternalLink
+                              href={item.officialSiteUrl}
+                              onClick={() => {
+                                setIsMenuOpen(false);
+                                setOpenDesktopGroup(null);
+                              }}
+                              className="mt-2 inline-block text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:underline"
+                              eventName="rentflow_official_click"
+                              eventParams={{ location: "navbar_desktop" }}
+                            >
+                              Visit RentFlow.in →
+                            </TrackedExternalLink>
+                          </div>
+                        );
+                      }
+                      if (isExternal) {
+                        return (
+                          <TrackedExternalLink
+                            key={item.name}
                             href={item.href}
                             onClick={() => {
                               setIsMenuOpen(false);
                               setOpenDesktopGroup(null);
                             }}
-                            className="block focus-visible:rounded focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50"
+                            className={`block rounded-lg border p-3 transition-colors focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50 ${
+                              pathname === item.href
+                                ? "border-slate-300 bg-slate-100 dark:border-slate-600 dark:bg-slate-800"
+                                : "border-transparent hover:border-slate-300 hover:bg-slate-50 dark:hover:border-slate-600 dark:hover:bg-slate-800"
+                            }`}
+                            eventName="vyxnos_nav_click"
+                            eventParams={{ location: "navbar_desktop" }}
                           >
                             <div className="flex flex-wrap items-center gap-2">
                               <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
                                 {item.name}
                               </p>
-                              {item.badge === "flagship" && (
-                                <span className="rounded bg-emerald-100 px-1.5 py-0.5 text-[10px] font-medium text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300">
-                                  Flagship
-                                </span>
-                              )}
                             </div>
                             {item.description && (
                               <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
                                 {item.description}
                               </p>
                             )}
-                          </Link>
-                          <TrackedExternalLink
-                            href={item.officialSiteUrl}
-                            onClick={() => {
-                              setIsMenuOpen(false);
-                              setOpenDesktopGroup(null);
-                            }}
-                            className="mt-2 inline-block text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:underline"
-                            eventName="rentflow_official_click"
-                            eventParams={{ location: "navbar_desktop" }}
-                          >
-                            Visit RentFlow.in →
                           </TrackedExternalLink>
-                        </div>
-                      ) : (
+                        );
+                      }
+                      return (
                         <Link
                           key={item.name}
                           href={item.href}
@@ -283,8 +322,8 @@ export default function Navbar() {
                             </p>
                           )}
                         </Link>
-                      )
-                    )}
+                      );
+                    })}
                     </div>
                   </div>
                 </div>
@@ -334,7 +373,23 @@ export default function Navbar() {
                     {group.name}
                   </p>
                   {group.items.map((item) => {
-                    const isActive = pathname.startsWith(item.href);
+                    const isExternal = item.href.startsWith("http");
+                    const isActive = !isExternal && pathname.startsWith(item.href);
+                    if (isExternal) {
+                      return (
+                        <div key={item.name} className="mt-2">
+                          <TrackedExternalLink
+                            href={item.href}
+                            onClick={() => setIsMenuOpen(false)}
+                            className="flex min-h-[48px] items-center rounded-md px-3 py-2 text-base font-medium text-slate-700 transition-colors hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-700 focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+                            eventName="vyxnos_nav_click"
+                            eventParams={{ location: "navbar_mobile" }}
+                          >
+                            {item.name}
+                          </TrackedExternalLink>
+                        </div>
+                      );
+                    }
                     return (
                       <div key={item.name} className="mt-2">
                         <Link
