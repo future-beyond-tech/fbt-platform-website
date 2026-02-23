@@ -18,7 +18,7 @@ const comparisonRows = [
 
 export const metadata = defaultMetadata(
   "Compare FBT Platforms",
-  "Side-by-side comparison of RentFlow (rentflow.in) and Vulnerability Assessment AI platforms. RentFlow early access and investor info at rentflow.in.",
+  "Side-by-side comparison of RentFlow (rentflow.in) and VulnAI platforms. RentFlow early access and investor info at rentflow.in.",
   "/products/compare"
 );
 
@@ -54,7 +54,7 @@ export default function ProductsComparePage() {
                     RentFlow
                   </th>
                   <th className="py-3 text-sm font-semibold text-slate-900 dark:text-slate-100">
-                    Vulnerability Assessment AI
+                    VulnAI
                   </th>
                 </tr>
               </thead>

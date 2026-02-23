@@ -138,12 +138,12 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Vulnerability Assessment AI */}
+            {/* VulnAI */}
             <div className="group rounded-xl border border-slate-800 bg-slate-900/50 p-6 backdrop-blur transition-colors hover:border-emerald-500/50">
               <div className="mb-4 flex items-start justify-between">
                 <div>
                   <h3 className="mb-1 text-lg font-bold text-white">
-                    Vulnerability Assessment AI
+                    VulnAI
                   </h3>
                   <p className="text-sm text-slate-400">
                     Security Automation Platform

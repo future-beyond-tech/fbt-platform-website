@@ -34,7 +34,7 @@ const productCards = [
     officialSiteUrl: rentFlowOfficialUrl,
   },
   {
-    name: "Vulnerability Assessment AI",
+    name: "VulnAI",
     href: "/products/vulnerability-ai",
     status: "Release Aug 2026",
   },

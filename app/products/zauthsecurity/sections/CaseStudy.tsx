@@ -11,7 +11,7 @@ const proofItems = [
     ],
   },
   {
-    title: "Vulnerability Assessment AI",
+    title: "VulnAI",
     points: [
       "Enterprise security platform design baseline",
       "Multi-tenant identity boundaries from day one",

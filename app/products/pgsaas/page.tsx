@@ -296,7 +296,7 @@ export default function PgSaasPage() {
                 href="/products/vulnerability-ai"
                 className="font-semibold text-sky-700 underline decoration-sky-300 underline-offset-2 dark:text-sky-300"
               >
-                Vulnerability Assessment AI
+                VulnAI
               </Link>{" "}
               for security automation teams.
             </p>

@@ -50,7 +50,7 @@ export default function AboutPage() {
               <p>
                 We also build our own products to validate our engineering
                 standards in real execution. Our RentFlow and
-                Vulnerability Assessment AI platform are active examples of how
+                VulnAI platform are active examples of how
                 we implement Clean Architecture, CQRS, multi-tenancy, and
                 security-first design in production-ready software.
               </p>
@@ -123,7 +123,7 @@ export default function AboutPage() {
 
               <p className="mt-7 text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:text-base">
                 Every product we&apos;ve built&mdash;ZAuthSecurity, RentFlow,
-                Vulnerability Assessment AI&mdash;started with the same
+                VulnAI&mdash;started with the same
                 question: &quot;Will this architecture survive 5 years of
                 scale?&quot; If the answer isn&apos;t an immediate yes, we
                 redesign until it is.

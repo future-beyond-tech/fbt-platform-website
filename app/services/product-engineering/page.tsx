@@ -42,7 +42,7 @@ export default function ProductEngineeringServicePage() {
             </p>
             <ul className="mt-4 space-y-2 text-sm text-slate-700 dark:text-slate-300 sm:text-base">
               <li>RentFlow: multi-tenant from day one, Clean Architecture + CQRS, blue-green deployments</li>
-              <li>Vulnerability Assessment AI: microservices architecture, AI integration, Kubernetes orchestration, enterprise security posture</li>
+              <li>VulnAI: microservices architecture, AI integration, Kubernetes orchestration, enterprise security posture</li>
             </ul>
             <p className="mt-4 text-sm text-slate-700 dark:text-slate-300 sm:text-base">
               This is how we build products. Let&apos;s build yours.

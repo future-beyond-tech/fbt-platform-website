@@ -1,4 +1,4 @@
-import { siteConfig } from "./siteConfig";
+import { siteConfig, rentFlowOfficialUrl, founderName } from "./siteConfig";
 
 export const organizationAndServiceSchema = {
   "@context": "https://schema.org",
@@ -10,6 +10,42 @@ export const organizationAndServiceSchema = {
       url: siteConfig.url,
       description: siteConfig.description,
       sameAs: ["https://www.linkedin.com/company/futurebeyondtech"],
+    },
+    {
+      "@type": "Person",
+      "@id": `${siteConfig.url}#founder`,
+      name: founderName,
+      jobTitle: "Founder",
+      worksFor: { "@id": `${siteConfig.url}#organization` },
+      url: siteConfig.url,
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${siteConfig.url}#product-rentflow`,
+      name: "RentFlow",
+      applicationCategory: "BusinessApplication",
+      applicationSubCategory: "Property and rental management",
+      description:
+        "India's first usage-based operating system for PG and co-living infrastructure. Multi-tenant architecture, event-driven billing, scale from 1 to 1,000+ properties.",
+      url: rentFlowOfficialUrl,
+      author: { "@id": `${siteConfig.url}#organization` },
+      provider: { "@id": `${siteConfig.url}#organization` },
+      operatingSystem: "Web",
+      offers: {
+        "@type": "Offer",
+        availability: "https://schema.org/PreOrder",
+        price: "0",
+        priceCurrency: "INR",
+      },
+    },
+    {
+      "@type": "Product",
+      "@id": `${siteConfig.url}#product-rentflow-product`,
+      name: "RentFlow",
+      description:
+        "Usage-based rental infrastructure platform for PG and co-living. Multi-tenant, event-driven billing, enterprise-grade.",
+      brand: { "@id": `${siteConfig.url}#organization` },
+      url: rentFlowOfficialUrl,
     },
     {
       "@type": "Service",

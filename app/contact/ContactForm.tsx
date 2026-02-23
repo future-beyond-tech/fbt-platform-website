@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 type TurnstileApi = {
@@ -27,6 +28,8 @@ declare global {
 const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 export default function ContactForm() {
+  const searchParams = useSearchParams();
+  const requestType = searchParams.get("type") === "investor-brief" ? "investor-brief" : "general";
   const captchaEnabled = Boolean(turnstileSiteKey);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [loading, setLoading] = useState(false);
@@ -185,6 +188,7 @@ export default function ContactForm() {
             tabIndex={-1}
             autoComplete="off"
           />
+          <input type="hidden" name="requestType" value={requestType} />
         </div>
 
         {captchaEnabled ? (

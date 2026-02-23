@@ -12,6 +12,7 @@ type NavLinkItem = {
   href: string;
   description?: string;
   officialSiteUrl?: string;
+  badge?: "flagship" | "in-development";
 };
 
 type NavGroup = {
@@ -29,25 +30,28 @@ const navGroups: NavGroup[] = [
     items: [
       { name: "Overview", href: "/products" },
       {
+        name: "RentFlow",
+        href: "/products/pg-management",
+        description: "Flagship — PG & co-living operating system",
+        officialSiteUrl: rentFlowOfficialUrl,
+        badge: "flagship",
+      },
+      {
         name: "Security Expertise",
         href: "/products/zauthsecurity",
         description: "Enterprise auth architecture",
       },
       {
-        name: "RentFlow",
-        href: "/products/pg-management",
-        description: "Official site: rentflow.in",
-        officialSiteUrl: rentFlowOfficialUrl,
-      },
-      {
-        name: "Vulnerability Assessment AI",
+        name: "VulnAI",
         href: "/products/vulnerability-ai",
         description: "Security intelligence automation platform",
+        badge: "in-development",
       },
       {
         name: "Supply Chain Security",
         href: "/sbom",
         description: "Coming 2026",
+        badge: "in-development",
       },
     ],
   },
@@ -215,9 +219,16 @@ export default function Navbar() {
                             }}
                             className="block focus-visible:rounded focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50"
                           >
-                            <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
-                              {item.name}
-                            </p>
+                            <div className="flex flex-wrap items-center gap-2">
+                              <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                                {item.name}
+                              </p>
+                              {item.badge === "flagship" && (
+                                <span className="rounded bg-emerald-100 px-1.5 py-0.5 text-[10px] font-medium text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300">
+                                  Flagship
+                                </span>
+                              )}
+                            </div>
                             {item.description && (
                               <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
                                 {item.description}
@@ -251,9 +262,21 @@ export default function Navbar() {
                               : "border border-transparent hover:border-slate-300 hover:bg-slate-50 dark:hover:border-slate-600 dark:hover:bg-slate-800"
                           }`}
                         >
-                          <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
-                            {item.name}
-                          </p>
+                          <div className="flex flex-wrap items-center gap-2">
+                            <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                              {item.name}
+                            </p>
+                            {item.badge === "flagship" && (
+                              <span className="rounded bg-emerald-100 px-1.5 py-0.5 text-[10px] font-medium text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300">
+                                Flagship
+                              </span>
+                            )}
+                            {item.badge === "in-development" && (
+                              <span className="rounded border border-slate-300 bg-white px-1.5 py-0.5 text-[10px] font-medium text-slate-600 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-400">
+                                In Development
+                              </span>
+                            )}
+                          </div>
                           {item.description && (
                             <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
                               {item.description}

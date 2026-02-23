@@ -46,7 +46,7 @@ export default function ServicesPage() {
                 </p>
                 <ul className="mt-2 space-y-1 text-sm text-slate-700 dark:text-slate-300">
                   <li>- RentFlow: multi-tenant from day one, Clean Architecture + CQRS, blue-green deployments</li>
-                  <li>- Vulnerability Assessment AI: microservices architecture, AI integration, Kubernetes orchestration</li>
+                  <li>- VulnAI: microservices architecture, AI integration, Kubernetes orchestration</li>
                 </ul>
                 <p className="mt-3 text-sm text-slate-700 dark:text-slate-300">
                   This is how we build products. Let&apos;s build yours.
