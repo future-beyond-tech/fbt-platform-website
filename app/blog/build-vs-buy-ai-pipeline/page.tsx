@@ -2,17 +2,35 @@ import Link from "next/link";
 import Container from "@/components/layout/Container";
 import MidArticleCTA from "@/components/blog/MidArticleCTA";
 import BlogNotifyForm from "@/components/blog/BlogNotifyForm";
+import JsonLd from "@/components/seo/JsonLd";
 import { defaultMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/siteConfig";
+import { articleSchema, breadcrumbSchema } from "@/lib/structuredData";
 
-export const metadata = defaultMetadata(
-  "The $50K Mistake: When to Build vs Buy Your AI Pipeline",
-  "Build vs buy AI automation decisions should be made on total cost, execution risk, and strategic control. This framework helps teams choose correctly.",
-  "/blog/build-vs-buy-ai-pipeline"
-);
+const slug = "build-vs-buy-ai-pipeline";
+const title = "The $50K Mistake: When to Build vs Buy Your AI Pipeline";
+const description = "Build vs buy AI automation decisions should be made on total cost, execution risk, and strategic control. This framework helps teams choose correctly.";
+const articleUrl = `${siteConfig.url}/blog/${slug}`;
+
+export const metadata = defaultMetadata(title, description, `/blog/${slug}`);
 
 export default function BuildVsBuyAiPipelineArticlePage() {
+  const articleStructured = articleSchema({
+    headline: title,
+    description,
+    url: articleUrl,
+    datePublished: "2026-02-19",
+    dateModified: "2026-02-25",
+  });
+  const breadcrumbStructured = breadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Blog", url: `${siteConfig.url}/blog` },
+    { name: title, url: articleUrl },
+  ]);
+
   return (
     <article className="py-20 sm:py-24 lg:py-32" aria-labelledby="article-title">
+      <JsonLd data={[articleStructured, breadcrumbStructured]} />
       <Container>
         <div className="mx-auto max-w-3xl">
           <header className="space-y-4">

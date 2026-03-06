@@ -2,17 +2,35 @@ import Link from "next/link";
 import Container from "@/components/layout/Container";
 import MidArticleCTA from "@/components/blog/MidArticleCTA";
 import BlogNotifyForm from "@/components/blog/BlogNotifyForm";
+import JsonLd from "@/components/seo/JsonLd";
 import { defaultMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/siteConfig";
+import { articleSchema, breadcrumbSchema } from "@/lib/structuredData";
 
-export const metadata = defaultMetadata(
-  "How to Pass SOC 2 in 8 Weeks (Without Hiring a Full Security Team)",
-  "Fast SOC 2 compliance for startups requires tight scope, clear ownership, and disciplined weekly execution. This 8-week plan shows how.",
-  "/blog/pass-soc-2-in-8-weeks"
-);
+const slug = "pass-soc-2-in-8-weeks";
+const title = "How to Pass SOC 2 in 8 Weeks (Without Hiring a Full Security Team)";
+const description = "Fast SOC 2 compliance for startups requires tight scope, clear ownership, and disciplined weekly execution. This 8-week plan shows how.";
+const articleUrl = `${siteConfig.url}/blog/${slug}`;
+
+export const metadata = defaultMetadata(title, description, `/blog/${slug}`);
 
 export default function Soc2EightWeeksArticlePage() {
+  const articleStructured = articleSchema({
+    headline: title,
+    description,
+    url: articleUrl,
+    datePublished: "2026-02-21",
+    dateModified: "2026-02-25",
+  });
+  const breadcrumbStructured = breadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Blog", url: `${siteConfig.url}/blog` },
+    { name: title, url: articleUrl },
+  ]);
+
   return (
     <article className="py-20 sm:py-24 lg:py-32" aria-labelledby="article-title">
+      <JsonLd data={[articleStructured, breadcrumbStructured]} />
       <Container>
         <div className="mx-auto max-w-3xl">
           <header className="space-y-4">

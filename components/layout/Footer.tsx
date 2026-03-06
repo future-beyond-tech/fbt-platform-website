@@ -12,12 +12,20 @@ const companyLinks = [
   { name: "Contact", href: "/contact" },
 ];
 
+const pillarLinks = [
+  { name: "Microservices Scale", href: "/pillars/microservices-scale-readiness" },
+  { name: "Startup Security & SOC 2", href: "/pillars/startup-security-soc2" },
+  { name: "Identity & OAuth", href: "/pillars/identity-oauth-oidc" },
+  { name: "Medical Device Security", href: "/pillars/medical-device-cybersecurity" },
+  { name: "AI Automation", href: "/pillars/ai-automation-engineering" },
+];
+
 const insightLinks = [
-  { name: "Insights Hub", href: "/insights" },
+  { name: "Blog", href: "/blog" },
   { name: "Research", href: "/research" },
   { name: "Resources", href: "/resources" },
   { name: "Case Studies", href: "/work" },
-  { name: "Medium Blog", href: "/insights" },
+  { name: "Insights Hub", href: "/insights" },
   { name: "Architecture Deep Dives", href: "/insights/architecture-deep-dives" },
 ];
 
@@ -79,6 +87,24 @@ export default function Footer() {
             </p>
             <ul className="mt-3 space-y-2">
               {companyLinks.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-sm font-medium text-slate-600 dark:text-slate-400 transition-colors hover:text-slate-900 dark:hover:text-slate-100 focus-visible:rounded focus-visible:ring-2 focus-visible:ring-slate-900 dark:focus-visible:ring-slate-50 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <nav aria-label="Footer pillar links">
+            <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+              Pillars
+            </p>
+            <ul className="mt-3 space-y-2">
+              {pillarLinks.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}

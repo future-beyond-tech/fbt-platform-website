@@ -7,9 +7,15 @@ export const organizationAndServiceSchema = {
       "@type": "Organization",
       "@id": `${siteConfig.url}#organization`,
       name: siteConfig.name,
+      alternateName: "FBT",
       url: siteConfig.url,
+      logo: `${siteConfig.url}/og-engineering-authority.svg`,
       description: siteConfig.description,
-      sameAs: ["https://www.linkedin.com/company/futurebeyondtech"],
+      sameAs: [
+        "https://www.linkedin.com/company/futurebeyondtech",
+        "https://medium.com/@futurebeyond.tech",
+      ],
+      founder: { "@id": `${siteConfig.url}#founder` },
     },
     {
       "@type": "Person",
@@ -88,3 +94,55 @@ export const organizationAndServiceSchema = {
     },
   ],
 };
+
+/** Build Schema.org TechArticle JSON-LD for blog/research pages */
+export function articleSchema(params: {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+}) {
+  const { headline, description, url, datePublished, dateModified = datePublished } = params;
+  return {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline,
+    description,
+    author: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/og-engineering-authority.svg`,
+      },
+    },
+    datePublished,
+    dateModified,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+  };
+}
+
+/** Build Schema.org BreadcrumbList JSON-LD */
+export function breadcrumbSchema(
+  items: Array<{ name: string; url: string }>
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}

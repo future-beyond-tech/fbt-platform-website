@@ -2,17 +2,35 @@ import Link from "next/link";
 import Container from "@/components/layout/Container";
 import MidArticleCTA from "@/components/blog/MidArticleCTA";
 import BlogNotifyForm from "@/components/blog/BlogNotifyForm";
+import JsonLd from "@/components/seo/JsonLd";
 import { defaultMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/siteConfig";
+import { articleSchema, breadcrumbSchema } from "@/lib/structuredData";
 
-export const metadata = defaultMetadata(
-  "Why Your Microservices Architecture Will Fail at Scale (And How to Fix It)",
-  "Microservices scalability problems are usually architecture and operational discipline problems. This guide explains the anti-patterns, metrics, and fixes.",
-  "/blog/microservices-architecture-fail-at-scale"
-);
+const slug = "microservices-architecture-fail-at-scale";
+const title = "Why Your Microservices Architecture Will Fail at Scale (And How to Fix It)";
+const description = "Microservices scalability problems are usually architecture and operational discipline problems. This guide explains the anti-patterns, metrics, and fixes.";
+const articleUrl = `${siteConfig.url}/blog/${slug}`;
+
+export const metadata = defaultMetadata(title, description, `/blog/${slug}`);
 
 export default function MicroservicesScaleArticlePage() {
+  const articleStructured = articleSchema({
+    headline: title,
+    description,
+    url: articleUrl,
+    datePublished: "2026-02-18",
+    dateModified: "2026-02-25",
+  });
+  const breadcrumbStructured = breadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Blog", url: `${siteConfig.url}/blog` },
+    { name: title, url: articleUrl },
+  ]);
+
   return (
     <article className="py-20 sm:py-24 lg:py-32" aria-labelledby="article-title">
+      <JsonLd data={[articleStructured, breadcrumbStructured]} />
       <Container>
         <div className="mx-auto max-w-3xl">
           <header className="space-y-4">

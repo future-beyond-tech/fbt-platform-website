@@ -16,7 +16,7 @@ const leadership: TeamMember[] = [
   },
   {
     name: "Gorantla Srikanth",
-    role: "Technical Manager",
+    role: "Chief Technology Officer",
     bio: "Oversees technical governance, architecture, code quality, and deployment strategy.",
     linkedinUrl: "",
   },

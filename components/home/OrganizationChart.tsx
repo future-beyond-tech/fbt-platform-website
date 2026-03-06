@@ -19,7 +19,7 @@ const branches: Branch[] = [
   {
     manager: {
       name: "Gorantla Srikanth",
-      title: "Technical Manager",
+      title: "Chief Technology Officer",
     },
     reports: [
       {

@@ -2,17 +2,37 @@ import Link from "next/link";
 import Container from "@/components/layout/Container";
 import MidArticleCTA from "@/components/blog/MidArticleCTA";
 import BlogNotifyForm from "@/components/blog/BlogNotifyForm";
+import JsonLd from "@/components/seo/JsonLd";
 import { defaultMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/siteConfig";
+import { articleSchema, breadcrumbSchema } from "@/lib/structuredData";
 
-export const metadata = defaultMetadata(
-  "We Analyzed 50 Startup Codebases: Here Are the 5 Security Mistakes Everyone Makes",
-  "Startup security mistakes are usually repetitive and preventable. This data-driven analysis covers the top five issues and concrete fixes.",
-  "/blog/startup-security-mistakes-from-50-codebases"
-);
+const slug = "startup-security-mistakes-from-50-codebases";
+const title = "We Analyzed 50 Startup Codebases: Here Are the 5 Security Mistakes Everyone Makes";
+const description = "Startup security mistakes are usually repetitive and preventable. This data-driven analysis covers the top five issues and concrete fixes.";
+const articleUrl = `${siteConfig.url}/blog/${slug}`;
+const datePublished = "2026-02-20";
+const dateModified = "2026-02-25";
+
+export const metadata = defaultMetadata(title, description, `/blog/${slug}`);
 
 export default function StartupSecurityMistakesArticlePage() {
+  const articleStructured = articleSchema({
+    headline: title,
+    description,
+    url: articleUrl,
+    datePublished,
+    dateModified,
+  });
+  const breadcrumbStructured = breadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Blog", url: `${siteConfig.url}/blog` },
+    { name: title, url: articleUrl },
+  ]);
+
   return (
     <article className="py-20 sm:py-24 lg:py-32" aria-labelledby="article-title">
+      <JsonLd data={[articleStructured, breadcrumbStructured]} />
       <Container>
         <div className="mx-auto max-w-3xl">
           <header className="space-y-4">
